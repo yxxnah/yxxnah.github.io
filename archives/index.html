@@ -56,6 +56,10 @@
                         <a href="/" class="logo"></a>
                     </h1>
                     
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">배우고 씁니다.</p>
+                        </h2>
+                    
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -66,12 +70,10 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a></li></ul>
+                                    
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/Programming/">index.programming</a>
-                                </li>
-                            
-                                <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                    <a class="main-nav-list-link" href="https://www.linkedin.com/in/%EC%9C%A4%EC%95%84-%EC%84%9C-a01040179/">About</a>
                                 </li>
                             
                         </ul>
@@ -151,41 +153,29 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2019/04/06/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://yxxnah.github.io/2019/04/06/hello-world/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
         <div class="article-meta">
             <div class="category">
-            
+            <a class="article-category-link" href="/categories/Programming/">Programming</a>
             </div>
-            <div class="date"><time datetime="2019-04-06T07:45:07.338Z" itemprop="datePublished">2019-04-06</time></div>
+            <div class="date"><time datetime="2019-04-06T09:28:27.000Z" itemprop="datePublished">2019-04-06</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/04/06/hello-world/">Hello World</a>
+        <a href="/2019/04/06/Git-Branch-Strategy(1)/">Git Branch Strategy</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+            git branch 전략을 잘 세워야 하는 이유
+코드의 변경 이력을 효율적으로 관리 할 수 있다.
+프로젝트 별 히스토리를 한 눈에 파악하기 쉽다.
+적절한 브랜치 사용은 배포의 편의성을 제공한다.
+
+상용 브랜치 모델
+git-flow
+github-flow
+gitlab-flow해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하
         </p>
     </div>
 </article>
@@ -267,25 +257,14 @@ Quick
     <div class="widget-wrap">
         <h3 class="widget-title">recents</h3>
         <div class="widget">
-            <ul id="recent-post" class>
+            <ul id="recent-post" class="no-thumbnail">
                 
                     <li>
                         
-                        <div class="item-thumbnail">
-                            <a href="/2019/04/06/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/04/06/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2019-04-06T07:45:07.338Z" itemprop="datePublished">2019-04-06</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/04/06/Git-Branch-Strategy(1)/" class="title">Git Branch Strategy</a></p>
+                            <p class="item-date"><time datetime="2019-04-06T09:28:27.000Z" itemprop="datePublished">2019-04-06</time></p>
                         </div>
                     </li>
                 
@@ -295,6 +274,13 @@ Quick
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
@@ -308,9 +294,23 @@ Quick
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Git/" style="font-size: 10px;">Git</a>
+        </div>
+    </div>
+
 
             
                 

@@ -6,17 +6,24 @@
     
 
     
-    <title>Archive: 2019 | dev:archive</title>
+    <title>Git Branch Strategy | dev:archive</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="dev:archive">
-<meta property="og:url" content="https://yxxnah.github.io/archives/2019/index.html">
+        <meta name="keywords" content="Git">
+    
+    <meta name="description" content="git branch 전략을 잘 세워야 하는 이유 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git Branch Strategy">
+<meta property="og:url" content="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/index.html">
 <meta property="og:site_name" content="dev:archive">
+<meta property="og:description" content="git branch 전략을 잘 세워야 하는 이유 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-04-06T09:38:29.312Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dev:archive">
+<meta name="twitter:title" content="Git Branch Strategy">
+<meta name="twitter:description" content="git branch 전략을 잘 세워야 하는 이유 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하">
     
 
     
@@ -129,45 +136,149 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2019
+    <a class="page-title-link" href="/categories/Programming/">Programming</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Git-Branch-Strategy(1)" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a>
-            </div>
-            <div class="date"><time datetime="2019-04-06T09:28:27.000Z" itemprop="datePublished">2019-04-06</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/04/06/Git-Branch-Strategy(1)/">Git Branch Strategy</a>
+        Git Branch Strategy
         </h1>
     
 
-        <p class="article-excerpt">
-            git branch 전략을 잘 세워야 하는 이유
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/04/06/Git-Branch-Strategy(1)/" class="article-date">
+            <time datetime="2019-04-06T09:28:27.000Z" itemprop="datePublished">2019-04-06</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Git/">Git</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="git-branch-전략을-잘-세워야-하는-이유"><a href="#git-branch-전략을-잘-세워야-하는-이유" class="headerlink" title="git branch 전략을 잘 세워야 하는 이유"></a>git branch 전략을 잘 세워야 하는 이유</h2><ul>
+<li>코드의 변경 이력을 효율적으로 관리 할 수 있다.</li>
+<li>프로젝트 별 히스토리를 한 눈에 파악하기 쉽다.</li>
+<li>적절한 브랜치 사용은 배포의 편의성을 제공한다.</li>
+</ul>
+<h2 id="상용-브랜치-모델"><a href="#상용-브랜치-모델" class="headerlink" title="상용 브랜치 모델"></a>상용 브랜치 모델</h2><ul>
+<li>git-flow</li>
+<li>github-flow</li>
+<li>gitlab-flow<br>해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바람직!</li>
+</ul>
+<h2 id="배포-환경"><a href="#배포-환경" class="headerlink" title="배포 환경"></a>배포 환경</h2><ul>
+<li>내가 다니는 회사의 경우, 인 당 주 2~4회로 배포가 잦은 편</li>
+<li>프로젝트 별 개발 일정이 겹치는 경우도 간혹 있음</li>
+<li>대부분 개발 시점과 배포 시점이 동일하지 않음<br>위의 이유로 <code>deploy</code> 라는 별도의 브랜치를 두어 반영하고자 하는 커밋 내역만 <code>cherry-pick</code> 하여 배포하고 있음</li>
+</ul>
+<h2 id="개발-환경"><a href="#개발-환경" class="headerlink" title="개발 환경"></a>개발 환경</h2><ul>
+<li>작업 순서 : 디자인 &gt; 퍼블리싱 &gt; 개발 &gt; QA &gt; QA 수정 &gt; 배포</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/" data-id="cju5b3v9e0007vo3zadsliw13" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Yoonah Seo"
+        },
+        "headline": "Git Branch Strategy",
+        "image": "https://yxxnah.github.io",
+        "keywords": "Git",
+        "genre": "Programming",
+        "datePublished": "2019-04-06",
+        "dateCreated": "2019-04-06",
+        "dateModified": "2019-04-06",
+        "url": "https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/",
+        "description": "git branch 전략을 잘 세워야 하는 이유
 코드의 변경 이력을 효율적으로 관리 할 수 있다.
 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다.
 적절한 브랜치 사용은 배포의 편의성을 제공한다.
@@ -175,16 +286,22 @@
 상용 브랜치 모델
 git-flow
 github-flow
-gitlab-flow해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하
-        </p>
-    </div>
+gitlab-flow해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하"
+        "wordCount": 120
+    }
+</script>
+
 </article>
-    
-        </div>
-    
 
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-    </div></section>
+    
+    </section>
 
 
 
@@ -246,6 +363,8 @@ gitlab-flow해당 모델을 적용할 때는 각자 모델을 참고하되 현�
             
         </ul>
     </div>
+    
+        
     
     <div class="widgets-container">
         
@@ -363,11 +482,13 @@ gitlab-flow해당 모델을 적용할 때는 각자 모델을 참고하되 현�
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
