@@ -6,17 +6,24 @@
     
 
     
-    <title>Archive: 2019 | dev:archive</title>
+    <title>Git Branch Strategy (2) | dev:archive</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="dev:archive">
-<meta property="og:url" content="https://yxxnah.github.io/archives/2019/index.html">
+        <meta name="keywords" content="Git">
+    
+    <meta name="description" content="기본 브랜치1. master (local/remote) 배포(push)용 브랜치 배포 준비된 코드 (stable 한 상태) 주기적으로 upstream/master pull 하여 저장소의 최신 내용을 내려 받음 배포(push) 준비가 완료되면 remote(origin)/master 브랜치로 push  2. develop (local) 개발용 브랜치 배포하기">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git Branch Strategy (2)">
+<meta property="og:url" content="https://yxxnah.github.io/2019/04/08/Git-Branch-Strategy-2/index.html">
 <meta property="og:site_name" content="dev:archive">
+<meta property="og:description" content="기본 브랜치1. master (local/remote) 배포(push)용 브랜치 배포 준비된 코드 (stable 한 상태) 주기적으로 upstream/master pull 하여 저장소의 최신 내용을 내려 받음 배포(push) 준비가 완료되면 remote(origin)/master 브랜치로 push  2. develop (local) 개발용 브랜치 배포하기">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-04-08T09:18:35.645Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dev:archive">
+<meta name="twitter:title" content="Git Branch Strategy (2)">
+<meta name="twitter:description" content="기본 브랜치1. master (local/remote) 배포(push)용 브랜치 배포 준비된 코드 (stable 한 상태) 주기적으로 upstream/master pull 하여 저장소의 최신 내용을 내려 받음 배포(push) 준비가 완료되면 remote(origin)/master 브랜치로 push  2. develop (local) 개발용 브랜치 배포하기">
     
 
     
@@ -131,45 +138,165 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2019
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Git/">Git</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Git-Branch-Strategy-2" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Git/">Git</a>
-            </div>
-            <div class="date"><time datetime="2019-04-08T09:09:02.000Z" itemprop="datePublished">2019-04-08</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/04/08/Git-Branch-Strategy-2/">Git Branch Strategy (2)</a>
+        Git Branch Strategy (2)
         </h1>
     
 
-        <p class="article-excerpt">
-            기본 브랜치1. master (local/remote)
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/04/08/Git-Branch-Strategy-2/" class="article-date">
+            <time datetime="2019-04-08T09:09:02.000Z" itemprop="datePublished">2019-04-08</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Git/">Git</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="기본-브랜치"><a href="#기본-브랜치" class="headerlink" title="기본 브랜치"></a>기본 브랜치</h2><h3 id="1-master-local-remote"><a href="#1-master-local-remote" class="headerlink" title="1. master (local/remote)"></a>1. master (local/remote)</h3><ul>
+<li>배포(push)용 브랜치</li>
+<li>배포 준비된 코드 (stable 한 상태)</li>
+<li>주기적으로 <span style="color:#009800">upstream/master</span> pull 하여 저장소의 최신 내용을 내려 받음</li>
+<li><span style="color:#0052cc">배포(push) 준비가 완료되면 remote(origin)/master 브랜치로 push</span></li>
+</ul>
+<h3 id="2-develop-local"><a href="#2-develop-local" class="headerlink" title="2. develop (local)"></a>2. develop (local)</h3><ul>
+<li>개발용 브랜치</li>
+<li>배포하기 위해 개발하는 코드는 모두 이곳에서 작업</li>
+<li>개발 완료 후 master 브랜치로 병합(merge)</li>
+<li>해당 브랜치는 로컬 저장소에 상주하며, master 브랜치의 내용을 병합(merge)하여 최신본을 유지</li>
+</ul>
+<h2 id="보조-브랜치-optional"><a href="#보조-브랜치-optional" class="headerlink" title="보조 브랜치 (optional)"></a>보조 브랜치 (optional)</h2><h3 id="1-feature-local-remote"><a href="#1-feature-local-remote" class="headerlink" title="1. feature/~ (local/remote)"></a>1. feature/~ (local/remote)</h3><ul>
+<li>브랜치 운용 정책에 따라 프로젝트 담당 개발자는 협업용 브랜치를 생성한다.</li>
+<li>마크업이 완료되어 퍼블리셔가 push한 내용이 담기면 develop 브랜치로 merge</li>
+<li>프로젝트가 완전히 종료되면 해당 브랜치는 삭제한다.</li>
+</ul>
+<h3 id="2-hotfixes-local"><a href="#2-hotfixes-local" class="headerlink" title="2. hotfixes/~ (local)"></a>2. hotfixes/~ (local)</h3><ul>
+<li>계획되지 않은 긴급 배포를 위한 브랜치</li>
+<li>QA 중 수정사항이 나온 경우에도 해당 브랜치를 사용하여 작업하면 된다.</li>
+<li><span style="color:#e11d21">가장 최신 소스인 master 브랜치로부터 분기</span></li>
+<li>master, develop에 병합 후 삭제한다.</li>
+</ul>
+<h2 id="git-flow-전략-모델"><a href="#git-flow-전략-모델" class="headerlink" title="git-flow 전략 모델"></a>git-flow 전략 모델</h2><h2 id="실제-적용-시-흐름"><a href="#실제-적용-시-흐름" class="headerlink" title="실제 적용 시 흐름"></a>실제 적용 시 흐름</h2><h2 id="작업본-운용-방침-personal"><a href="#작업본-운용-방침-personal" class="headerlink" title="작업본 운용 방침 (personal)"></a>작업본 운용 방침 (personal)</h2><ol>
+<li>히스토리 라인은 최대한 간결하게 가져간다.</li>
+<li>pull을 자주하여 저장소와 비슷한 이력을 유지한다. (최신 코드 유지)</li>
+<li>commit은 의미있는 단위로 하되 모든 동작이 기능하는 상태여야 한다. (stable)</li>
+</ol>
+<h2 id="Commit-massage"><a href="#Commit-massage" class="headerlink" title="Commit massage"></a>Commit massage</h2><h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><ul>
+<li>브랜치 전략 비교(git-flow / github-flow / gitlab-flow) : <a href="http://blog.weirdx.io/post/21349" target="_blank" rel="noopener">http://blog.weirdx.io/post/21349</a></li>
+<li><a href="http://blog.naver.com/PostView.nhn?blogId=tmondev&amp;logNo=220763012361" target="_blank" rel="noopener">http://blog.naver.com/PostView.nhn?blogId=tmondev&amp;logNo=220763012361</a></li>
+<li>gitlab-flow : <a href="https://postd.cc/gitlab-flow/" target="_blank" rel="noopener">https://postd.cc/gitlab-flow/</a> (번역해서 볼것)</li>
+<li><a href="https://gist.github.com/ihoneymon/a28138ee5309c73e94f9" target="_blank" rel="noopener">https://gist.github.com/ihoneymon/a28138ee5309c73e94f9</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://yxxnah.github.io/2019/04/08/Git-Branch-Strategy-2/" data-id="cju859w5u0000u63zanti6by0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Yoonah Seo"
+        },
+        "headline": "Git Branch Strategy (2)",
+        "image": "https://yxxnah.github.io",
+        "keywords": "Git",
+        "genre": "Programming Git",
+        "datePublished": "2019-04-08",
+        "dateCreated": "2019-04-08",
+        "dateModified": "2019-04-08",
+        "url": "https://yxxnah.github.io/2019/04/08/Git-Branch-Strategy-2/",
+        "description": "기본 브랜치1. master (local/remote)
 배포(push)용 브랜치
 배포 준비된 코드 (stable 한 상태)
 주기적으로 upstream/master pull 하여 저장소의 최신 내용을 내려 받음
@@ -177,53 +304,22 @@
 
 2. develop (local)
 개발용 브랜치
-배포하기 
-        </p>
-    </div>
+배포하기 "
+        "wordCount": 219
+    }
+</script>
+
 </article>
-    
 
+    <section id="comments">
     
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Git/">Git</a>
-            </div>
-            <div class="date"><time datetime="2019-04-06T09:28:27.000Z" itemprop="datePublished">2019-04-06</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/04/06/Git-Branch-Strategy(1)/">Git Branch Strategy (1)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            브랜치 전략을 잘 세우면
-코드의 변경 이력을 효율적으로 관리 할 수 있다.
-프로젝트 별 히스토리를 한 눈에 파악하기 쉽다.
-적절한 브랜치 사용은 배포의 편의성을 제공한다.
-
-상용 브랜치 모델
-git-flow
-github-flow
-gitlab-flow
-
-해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
 
-
-    </div></section>
+    
+    </section>
 
 
 
@@ -285,6 +381,19 @@ gitlab-flow
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/04/06/Git-Branch-Strategy(1)/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Git Branch Strategy (1)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -411,11 +520,13 @@ gitlab-flow
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://yxxnah.github.io/2019/04/08/Git-Branch-Strategy-2/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
