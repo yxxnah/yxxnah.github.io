@@ -6,24 +6,21 @@
     
 
     
-    <title>Git Branch Strategy (1) | Archive</title>
+    <title>Git Branch Strategy (3) | Archive</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="Git">
     
-    <meta name="description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
-<meta name="keywords" content="Git">
+    <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git Branch Strategy (1)">
-<meta property="og:url" content="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/index.html">
+<meta property="og:title" content="Git Branch Strategy (3)">
+<meta property="og:url" content="https://yxxnah.github.io/2019/04/16/Git-Branch-Strategy-3/index.html">
 <meta property="og:site_name" content="Archive">
-<meta property="og:description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-16T10:41:40.749Z">
+<meta property="og:updated_time" content="2019-04-16T00:09:01.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git Branch Strategy (1)">
-<meta name="twitter:description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
+<meta name="twitter:title" content="Git Branch Strategy (3)">
     
 
     
@@ -143,14 +140,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-Git-Branch-Strategy(1)" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Git-Branch-Strategy-3" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Git Branch Strategy (1)
+        Git Branch Strategy (3)
         </h1>
     
 
@@ -160,8 +157,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/04/06/Git-Branch-Strategy(1)/" class="article-date">
-            <time datetime="2019-04-06T09:28:27.000Z" itemprop="datePublished">2019-04-06</time>
+        <a href="/2019/04/16/Git-Branch-Strategy-3/" class="article-date">
+            <time datetime="2019-04-15T23:53:16.000Z" itemprop="datePublished">2019-04-16</time>
         </a>
     </div>
 
@@ -177,35 +174,14 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="브랜치-전략을-잘-세우면"><a href="#브랜치-전략을-잘-세우면" class="headerlink" title="브랜치 전략을 잘 세우면"></a>브랜치 전략을 잘 세우면</h2><ul>
-<li>코드의 변경 이력을 효율적으로 관리 할 수 있다.</li>
-<li>프로젝트 별 히스토리를 한 눈에 파악하기 쉽다.</li>
-<li>적절한 브랜치 사용은 배포의 편의성을 제공한다.</li>
-</ul>
-<h2 id="상용-브랜치-모델"><a href="#상용-브랜치-모델" class="headerlink" title="상용 브랜치 모델"></a>상용 브랜치 모델</h2><ul>
-<li>git-flow</li>
-<li>github-flow</li>
-<li>gitlab-flow</li>
-</ul>
-<p>해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바람직!</p>
-<h2 id="배포-환경"><a href="#배포-환경" class="headerlink" title="배포 환경"></a>배포 환경</h2><ul>
-<li>현직장의 경우, 일주일에 최대 4회로 배포가 잦은 편</li>
-<li>프로젝트 별 개발 일정이 겹치는 경우도 간혹 있음</li>
-<li>대부분 개발 시점과 배포 시점이 동일하지 않음<br>위의 이유로 <code>deploy</code> 라는 별도의 브랜치를 두어 반영하고자 하는 커밋 내역만 <code>cherry-pick</code> 하여 배포하고 있음</li>
-</ul>
-<h2 id="개발-환경"><a href="#개발-환경" class="headerlink" title="개발 환경"></a>개발 환경</h2><ul>
-<li>작업 순서 : 디자인 &gt; 퍼블리싱 &gt; 개발 &gt; QA &gt; QA 수정 &gt; 배포</li>
-<li>SourceTree 사용</li>
-<li>배포/개발 환경을 고려하여 <code>git-flow</code> 모델을 적절히 활용하기로 함</li>
-</ul>
-
+            
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/" data-id="cjukxqaxb0000e63z1fga6ky6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/04/16/Git-Branch-Strategy-3/" data-id="cjukxqaya000je63zgftdzky4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -275,26 +251,16 @@
             "@type": "Person",
             "name": "Yoonah Seo"
         },
-        "headline": "Git Branch Strategy (1)",
+        "headline": "Git Branch Strategy (3)",
         "image": "https://yxxnah.github.io",
         "keywords": "Git",
         "genre": "Programming Git",
-        "datePublished": "2019-04-06",
-        "dateCreated": "2019-04-06",
+        "datePublished": "2019-04-16",
+        "dateCreated": "2019-04-16",
         "dateModified": "2019-04-16",
-        "url": "https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/",
-        "description": "브랜치 전략을 잘 세우면
-코드의 변경 이력을 효율적으로 관리 할 수 있다.
-프로젝트 별 히스토리를 한 눈에 파악하기 쉽다.
-적절한 브랜치 사용은 배포의 편의성을 제공한다.
-
-상용 브랜치 모델
-git-flow
-github-flow
-gitlab-flow
-
-해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바"
-        "wordCount": 119
+        "url": "https://yxxnah.github.io/2019/04/16/Git-Branch-Strategy-3/",
+        "description": ""
+        "wordCount": 1
     }
 </script>
 
@@ -374,16 +340,22 @@ gitlab-flow
         
 <nav id="article-nav">
     
-        <a href="/2019/04/08/Git-Branch-Strategy-2/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Git Branch Strategy (2)
+            MSA(Microservice Architecture) 톺아보기
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
+    
+        <a href="/2019/04/08/Git-Branch-Strategy-2/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Git Branch Strategy (2)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -531,7 +503,7 @@ gitlab-flow
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/';
+    var disqus_url = 'https://yxxnah.github.io/2019/04/16/Git-Branch-Strategy-3/';
     
     (function() {
     var dsq = document.createElement('script');

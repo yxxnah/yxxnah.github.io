@@ -6,24 +6,26 @@
     
 
     
-    <title>Git Branch Strategy (1) | Archive</title>
+    <title>MSA(Microservice Architecture) 톺아보기 | Archive</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Git">
+        <meta name="keywords" content="MSA">
     
-    <meta name="description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
-<meta name="keywords" content="Git">
+    <meta name="description" content="목적: 마이크로서비스 아키텍처에 대해 톺아보기 내용 비교 Node.js API 서버 구축  비교 (monolith vs microservices)출처: martinfowler.com 모놀리틱 아키텍처 하나의 프로젝트로 구성된 애플리케이션 (waterfall model) 하나의 서버에 모든 비즈니스 로직이 들어가 있는 형태 서비스 규모가 커지면서 발생하는 각">
+<meta name="keywords" content="MSA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git Branch Strategy (1)">
-<meta property="og:url" content="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/index.html">
+<meta property="og:title" content="MSA(Microservice Architecture) 톺아보기">
+<meta property="og:url" content="https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/index.html">
 <meta property="og:site_name" content="Archive">
-<meta property="og:description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
+<meta property="og:description" content="목적: 마이크로서비스 아키텍처에 대해 톺아보기 내용 비교 Node.js API 서버 구축  비교 (monolith vs microservices)출처: martinfowler.com 모놀리틱 아키텍처 하나의 프로젝트로 구성된 애플리케이션 (waterfall model) 하나의 서버에 모든 비즈니스 로직이 들어가 있는 형태 서비스 규모가 커지면서 발생하는 각">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-16T10:41:40.749Z">
+<meta property="og:image" content="https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/decentralised-data.png">
+<meta property="og:updated_time" content="2019-04-17T08:13:19.486Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git Branch Strategy (1)">
-<meta name="twitter:description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
+<meta name="twitter:title" content="MSA(Microservice Architecture) 톺아보기">
+<meta name="twitter:description" content="목적: 마이크로서비스 아키텍처에 대해 톺아보기 내용 비교 Node.js API 서버 구축  비교 (monolith vs microservices)출처: martinfowler.com 모놀리틱 아키텍처 하나의 프로젝트로 구성된 애플리케이션 (waterfall model) 하나의 서버에 모든 비즈니스 로직이 들어가 있는 형태 서비스 규모가 커지면서 발생하는 각">
+<meta name="twitter:image" content="https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/decentralised-data.png">
     
 
     
@@ -138,19 +140,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Git/">Git</a>
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/MSA/">MSA</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-Git-Branch-Strategy(1)" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-MSA-Microservice-Architecture-톺아보기-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Git Branch Strategy (1)
+        MSA(Microservice Architecture) 톺아보기
         </h1>
     
 
@@ -160,8 +162,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/04/06/Git-Branch-Strategy(1)/" class="article-date">
-            <time datetime="2019-04-06T09:28:27.000Z" itemprop="datePublished">2019-04-06</time>
+        <a href="/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/" class="article-date">
+            <time datetime="2019-04-17T08:02:55.000Z" itemprop="datePublished">2019-04-17</time>
         </a>
     </div>
 
@@ -170,33 +172,87 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Git/">Git</a>
+        <a class="tag-link" href="/tags/MSA/">MSA</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="브랜치-전략을-잘-세우면"><a href="#브랜치-전략을-잘-세우면" class="headerlink" title="브랜치 전략을 잘 세우면"></a>브랜치 전략을 잘 세우면</h2><ul>
-<li>코드의 변경 이력을 효율적으로 관리 할 수 있다.</li>
-<li>프로젝트 별 히스토리를 한 눈에 파악하기 쉽다.</li>
-<li>적절한 브랜치 사용은 배포의 편의성을 제공한다.</li>
+            <h2 id="목적"><a href="#목적" class="headerlink" title="목적"></a>목적</h2><p>: 마이크로서비스 아키텍처에 대해 톺아보기</p>
+<h2 id="내용"><a href="#내용" class="headerlink" title="내용"></a>내용</h2><ol>
+<li>비교</li>
+<li><strong>Node.js API 서버 구축</strong></li>
+</ol>
+<h2 id="비교-monolith-vs-microservices"><a href="#비교-monolith-vs-microservices" class="headerlink" title="비교 (monolith vs microservices)"></a>비교 (monolith vs microservices)</h2><p><img src="decentralised-data.png" alt><br>출처: martinfowler.com</p>
+<h2 id="모놀리틱-아키텍처"><a href="#모놀리틱-아키텍처" class="headerlink" title="모놀리틱 아키텍처"></a>모놀리틱 아키텍처</h2><ul>
+<li>하나의 프로젝트로 구성된 애플리케이션 (waterfall model)</li>
+<li>하나의 서버에 모든 비즈니스 로직이 들어가 있는 형태</li>
+<li>서비스 규모가 커지면서 발생하는 각종 이슈<br><span style="color:#e11d21">: 업데이트 및 테스트의 어려움, 블러킹 포인트 증가 등</span></li>
+<li>구조<br><img src="image.png" alt></li>
 </ul>
-<h2 id="상용-브랜치-모델"><a href="#상용-브랜치-모델" class="headerlink" title="상용 브랜치 모델"></a>상용 브랜치 모델</h2><ul>
-<li>git-flow</li>
-<li>github-flow</li>
-<li>gitlab-flow</li>
+<h2 id="마이크로-서비스-아키텍처"><a href="#마이크로-서비스-아키텍처" class="headerlink" title="마이크로 서비스 아키텍처"></a>마이크로 서비스 아키텍처</h2><h3 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h3><ul>
+<li>모놀리틱 아키텍처와 상반되는 아키텍처</li>
+<li>하나의 큰 애플리케이션을 여러 개의 작은 애플리케이션으로 쪼개어 변경과 조합이 가능하도록 만든 아키텍처</li>
+<li>애플리케이션의 추상화</li>
+<li>서비스 단위로 서버를 구성</li>
+<li>구조<br><img src="msa.png" alt></li>
 </ul>
-<p>해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바람직!</p>
-<h2 id="배포-환경"><a href="#배포-환경" class="headerlink" title="배포 환경"></a>배포 환경</h2><ul>
-<li>현직장의 경우, 일주일에 최대 4회로 배포가 잦은 편</li>
-<li>프로젝트 별 개발 일정이 겹치는 경우도 간혹 있음</li>
-<li>대부분 개발 시점과 배포 시점이 동일하지 않음<br>위의 이유로 <code>deploy</code> 라는 별도의 브랜치를 두어 반영하고자 하는 커밋 내역만 <code>cherry-pick</code> 하여 배포하고 있음</li>
+<h3 id="언제-필요-할까"><a href="#언제-필요-할까" class="headerlink" title="언제 필요 할까?"></a>언제 필요 할까?</h3><ul>
+<li>애플리케이션의 배포에 한 시간 이상 소요된다.</li>
+<li>단순한 기능 하나를 수정해도 전체 기능에 대한 QA가 필요하다.</li>
+<li>단순한 버그 수정이 더 중대한 버그를 생산하는 일이 많아졌다.</li>
+<li>현재의 애플리케이션을 기능별로 나눈다고 가정했을 때 수십개의 마이크로서비스가 가능하다.</li>
 </ul>
-<h2 id="개발-환경"><a href="#개발-환경" class="headerlink" title="개발 환경"></a>개발 환경</h2><ul>
-<li>작업 순서 : 디자인 &gt; 퍼블리싱 &gt; 개발 &gt; QA &gt; QA 수정 &gt; 배포</li>
-<li>SourceTree 사용</li>
-<li>배포/개발 환경을 고려하여 <code>git-flow</code> 모델을 적절히 활용하기로 함</li>
+<h3 id="인터페이스-레이어"><a href="#인터페이스-레이어" class="headerlink" title="인터페이스 레이어"></a>인터페이스 레이어</h3><ul>
+<li>HTTP 서버</li>
+<li>클라이언트가 인터페이스 하나로 모든 API를 호출 할 수 있음</li>
+</ul>
+<h3 id="API-Gateway"><a href="#API-Gateway" class="headerlink" title="API Gateway"></a>API Gateway</h3><ul>
+<li>클라이언트의 진입점(end-point)</li>
+<li>클라이언트와 서비스의 분리를 가능하게 함</li>
+</ul>
+<h3 id="API-Gateway가-해주면-좋은-역할"><a href="#API-Gateway가-해주면-좋은-역할" class="headerlink" title="API Gateway가 해주면 좋은 역할"></a>API Gateway가 해주면 좋은 역할</h3><ul>
+<li>인증</li>
+<li>인가</li>
+<li>Endpoint 관리 (Routing, LoadBalancer)</li>
+<li>API 통계 및 로깅</li>
+<li>API Request, Response 형식 검사 및 일관성 유지</li>
+</ul>
+<h2 id="왜-Node-js"><a href="#왜-Node-js" class="headerlink" title="왜 Node.js?"></a>왜 Node.js?</h2><ul>
+<li><span style="color:#e11d21">non-blocking I/O, 싱글 스레드 방식</span><br>: API 요청 시 Client(PG사)의 대기 시간 감소 =&gt; 실시간 통신에 유리</li>
+<li>API Gateway 에서 지원해야 할 기능(모듈)들을 많이 내장하고 있음</li>
+</ul>
+<h2 id="기대-효과"><a href="#기대-효과" class="headerlink" title="기대 효과"></a>기대 효과</h2><ul>
+<li>API 통신 시간 단축 (Client 대기 시간 단축)</li>
+<li>배포 및 테스트 단위 축소</li>
+<li>유연한 기능 추가</li>
+</ul>
+<h2 id="도입-시-고려해야할-점"><a href="#도입-시-고려해야할-점" class="headerlink" title="도입 시 고려해야할 점"></a>도입 시 고려해야할 점</h2><ul>
+<li>분산 서버 상태에 따른 응답속도 지연/장애 발생 가능</li>
+<li>게이트웨이(endpoint)에서 오류발생, 지연 시 모든 서비스에 영향을 줄 수 있음</li>
+</ul>
+<h2 id="도입-방법"><a href="#도입-방법" class="headerlink" title="도입 방법"></a>도입 방법</h2><ul>
+<li>기존 프로그램을 한 번에 바꾸는 것보다 점진적으로 바꿔나가는게 바람직<br><img src="api-gateway-evolutinary-design.png" alt></li>
+</ul>
+<p>출처 : <a href="https://blog.risingstack.com/building-an-api-gateway-using-nodejs/" target="_blank" rel="noopener">https://blog.risingstack.com/building-an-api-gateway-using-nodejs/</a></p>
+<ul>
+<li>request 받는 API 대상부터 시작 (서비스 상태 갱신)<h2 id="확인-사항"><a href="#확인-사항" class="headerlink" title="확인 사항"></a>확인 사항</h2></li>
+<li>API Gateway = HTTP Server<ul>
+<li>PHP API 호출 방식으로 하는 경우, 별도 서버 필요</li>
+</ul>
+</li>
+<li>기존 연동 PG사/솔루션 legacy 보장 범위</li>
+</ul>
+<h2 id="참고-사이트"><a href="#참고-사이트" class="headerlink" title="참고 사이트"></a>참고 사이트</h2><h3 id="마이크로-서비스-아키텍처-1"><a href="#마이크로-서비스-아키텍처-1" class="headerlink" title="마이크로 서비스 아키텍처"></a>마이크로 서비스 아키텍처</h3><ul>
+<li><a href="http://guruble.com/마이크로서비스microservice-아키텍처-그것이-뭣이-중헌디/" target="_blank" rel="noopener">http://guruble.com/마이크로서비스microservice-아키텍처-그것이-뭣이-중헌디/</a></li>
+<li><a href="https://docs.microsoft.com/ko-kr/azure/architecture/guide/architecture-styles/microservices" target="_blank" rel="noopener">https://docs.microsoft.com/ko-kr/azure/architecture/guide/architecture-styles/microservices</a></li>
+<li><a href="https://www.slideshare.net/saltynut/building-micro-service-architecture" target="_blank" rel="noopener">https://www.slideshare.net/saltynut/building-micro-service-architecture</a></li>
+<li><a href="http://whatsup.nhnent.com/gd/board/viewByMeta/468/168273?_ssoType=real&amp;_useExternalNetwork=FALSE&amp;_requestMainDomain=nhnent.com&amp;_dynamicStaticURL=http://static.nhnent.com&amp;_defaultSystem=nhnent.com&amp;SPOT_TYPE=NOT_USE_RIGHT_MENU&amp;_defaultSystemTitle=WhatsUP" target="_blank" rel="noopener">http://whatsup.nhnent.com/gd/board/viewByMeta/468/168273?_ssoType=real&amp;_useExternalNetwork=FALSE&amp;_requestMainDomain=nhnent.com&amp;_dynamicStaticURL=http://static.nhnent.com&amp;_defaultSystem=nhnent.com&amp;SPOT_TYPE=NOT_USE_RIGHT_MENU&amp;_defaultSystemTitle=WhatsUP</a><h3 id="Node-js-PHP"><a href="#Node-js-PHP" class="headerlink" title="Node.js  PHP"></a>Node.js <-> PHP</-></h3></li>
+<li>Node.js 와 PHP 통합 : <a href="https://entwickler.de/webandphp/integrating-node-js-with-php-125830.html" target="_blank" rel="noopener">https://entwickler.de/webandphp/integrating-node-js-with-php-125830.html</a></li>
+<li>socket.io : <a href="https://poiemaweb.com/nodejs-socketio" target="_blank" rel="noopener">https://poiemaweb.com/nodejs-socketio</a></li>
+<li>Node.js -&gt; PHP 모듈 실행 : <a href="https://medium.com/@MartinMouritzen/how-to-run-php-in-node-js-and-why-you-probably-shouldnt-do-that-fb12abe955b0" target="_blank" rel="noopener">https://medium.com/@MartinMouritzen/how-to-run-php-in-node-js-and-why-you-probably-shouldnt-do-that-fb12abe955b0</a></li>
+<li>Node.js에서 자식 프로세스 실행 : <a href="https://mylko72.gitbooks.io/node-js/content/chapter9/chapter9_2.html" target="_blank" rel="noopener">https://mylko72.gitbooks.io/node-js/content/chapter9/chapter9_2.html</a></li>
 </ul>
 
         </div>
@@ -205,7 +261,7 @@
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/" data-id="cjukxqaxb0000e63z1fga6ky6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/" data-id="cjukxqaxk0005e63z14onyz9z" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -275,26 +331,25 @@
             "@type": "Person",
             "name": "Yoonah Seo"
         },
-        "headline": "Git Branch Strategy (1)",
-        "image": "https://yxxnah.github.io",
-        "keywords": "Git",
-        "genre": "Programming Git",
-        "datePublished": "2019-04-06",
-        "dateCreated": "2019-04-06",
-        "dateModified": "2019-04-16",
-        "url": "https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/",
-        "description": "브랜치 전략을 잘 세우면
-코드의 변경 이력을 효율적으로 관리 할 수 있다.
-프로젝트 별 히스토리를 한 눈에 파악하기 쉽다.
-적절한 브랜치 사용은 배포의 편의성을 제공한다.
+        "headline": "MSA(Microservice Architecture) 톺아보기",
+        "image": "https://yxxnah.github.iodecentralised-data.png",
+        "keywords": "MSA",
+        "genre": "Programming MSA",
+        "datePublished": "2019-04-17",
+        "dateCreated": "2019-04-17",
+        "dateModified": "2019-04-17",
+        "url": "https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/",
+        "description": "목적: 마이크로서비스 아키텍처에 대해 톺아보기
+내용
+비교
+Node.js API 서버 구축
 
-상용 브랜치 모델
-git-flow
-github-flow
-gitlab-flow
-
-해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바"
-        "wordCount": 119
+비교 (monolith vs microservices)출처: martinfowler.com
+모놀리틱 아키텍처
+하나의 프로젝트로 구성된 애플리케이션 (waterfall model)
+하나의 서버에 모든 비즈니스 로직이 들어가 있는 형태
+서비스 규모가 커지면서 발생하는 각"
+        "wordCount": 374
     }
 </script>
 
@@ -374,16 +429,12 @@ gitlab-flow
         
 <nav id="article-nav">
     
-        <a href="/2019/04/08/Git-Branch-Strategy-2/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Git Branch Strategy (2)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
+        <a href="/2019/04/16/Git-Branch-Strategy-3/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Git Branch Strategy (3)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -531,7 +582,7 @@ gitlab-flow
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/';
+    var disqus_url = 'https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/';
     
     (function() {
     var dsq = document.createElement('script');
