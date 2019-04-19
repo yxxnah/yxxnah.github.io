@@ -6,17 +6,24 @@
     
 
     
-    <title>Tag: git | Archive</title>
+    <title>Git Troubleshooting | Archive</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Archive">
-<meta property="og:url" content="https://yxxnah.github.io/tags/git/index.html">
+        <meta name="keywords" content="git">
+    
+    <meta name="description" content="git을 사용하면서 자주 부딪혔던 상황들에 대해 정리해보았다.  git 사용 시 자주 만나는 상황들 git push 가 안됨   원인 : remote 저장소와 로컬 저장소가 서로 다른 기록을 가지고 있어서 해결 방법(1) [커밋 전] remote와 동기화 후 코드 수정   1$ git pull origin master   (BEST) pull upstre">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git Troubleshooting">
+<meta property="og:url" content="https://yxxnah.github.io/2019/04/19/Git-Troubleshooting/index.html">
 <meta property="og:site_name" content="Archive">
+<meta property="og:description" content="git을 사용하면서 자주 부딪혔던 상황들에 대해 정리해보았다.  git 사용 시 자주 만나는 상황들 git push 가 안됨   원인 : remote 저장소와 로컬 저장소가 서로 다른 기록을 가지고 있어서 해결 방법(1) [커밋 전] remote와 동기화 후 코드 수정   1$ git pull origin master   (BEST) pull upstre">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-04-19T08:59:33.906Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Archive">
+<meta name="twitter:title" content="Git Troubleshooting">
+<meta name="twitter:description" content="git을 사용하면서 자주 부딪혔던 상황들에 대해 정리해보았다.  git 사용 시 자주 만나는 상황들 git push 가 안됨   원인 : remote 저장소와 로컬 저장소가 서로 다른 기록을 가지고 있어서 해결 방법(1) [커밋 전] remote와 동기화 후 코드 수정   1$ git pull origin master   (BEST) pull upstre">
     
 
     
@@ -129,45 +136,187 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>git</em>
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/git/">git</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Git-Troubleshooting" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/git/">git</a>
-            </div>
-            <div class="date"><time datetime="2019-04-19T08:54:45.000Z" itemprop="datePublished">2019-04-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/04/19/Git-Troubleshooting/">Git Troubleshooting</a>
+        Git Troubleshooting
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/04/19/Git-Troubleshooting/" class="article-date">
+            <time datetime="2019-04-19T08:54:45.000Z" itemprop="datePublished">2019-04-19</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/git/">git</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote>
+<p>git을 사용하면서 자주 부딪혔던 상황들에 대해 정리해보았다.</p>
+</blockquote>
+<h2 id="git-사용-시-자주-만나는-상황들"><a href="#git-사용-시-자주-만나는-상황들" class="headerlink" title="git 사용 시 자주 만나는 상황들"></a>git 사용 시 자주 만나는 상황들</h2><ol>
+<li>git push 가 안됨</li>
+</ol>
+<ul>
+<li>원인 : remote 저장소와 로컬 저장소가 서로 다른 기록을 가지고 있어서</li>
+<li><p>해결 방법<br>(1) <span style="color:#009800">[커밋 전]</span> remote와 동기화 후 코드 수정</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+<p>  <span style="color:#0052cc"><strong>(BEST) pull upstream &gt; push origin &gt; 작업 &gt; commit &gt; push</strong></span><br>(2) <span style="color:#e11d21">[커밋 후]</span> 이미 커밋한 경우</p>
+<ul>
+<li><p>리모트의 기록을 다운받아옴</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git rebase origin/HEAD (리모트의 가장 최신 기록에 변경사항을 덮음)</p>
+</li>
+<li>이 두가지가 모두 안되는 경우, 서로 다른 사람이 코드의 같은 부분을 다르게 고친 것 (둘 중 어느 변경사항을 적용할지 선택하여 커밋을 수정해야만 함)</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>commit 취소해야 할 때</li>
+</ol>
+<ul>
+<li><p>해결 방법 : <code>git reset</code> 사용</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --[option] [버전 id]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>옵션</p>
+<ul>
+<li>soft : 모든 로컬 변경사항을 유지</li>
+<li>hard : 모든 작업 상태 내 변경 사항을 버림</li>
+<li>mixed : 작업 상태는 그대로 두지만 인덱스는 리셋</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>push까지 했는데 취소해야 할 때</li>
+</ol>
+<ul>
+<li>해결 방법 : <code>git revert</code> 사용<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git revert [버전 id]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li><p>commit을 이미 했는데, message 수정이 필요할 때</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend -m [커밋 메시지]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>push까지 했는데, message 수정이 필요할 때</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend -m [커밋 메시지]</span><br><span class="line">$ git push --force origin master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><ul>
+<li>commit 내역 수정 : <a href="https://homoefficio.github.io/2017/04/16/Git-과거의-특정-커밋-수정하기/" target="_blank" rel="noopener">https://homoefficio.github.io/2017/04/16/Git-과거의-특정-커밋-수정하기/</a></li>
+<li><a href="https://www.devpools.kr/2017/02/05/초보용-git-되돌리기-reset-revert/" target="_blank" rel="noopener">https://www.devpools.kr/2017/02/05/초보용-git-되돌리기-reset-revert/</a></li>
+<li>git reset vs revert : <a href="http://www.devpools.kr/2017/01/31/개발바보들-1화-git-back-to-the-future/" target="_blank" rel="noopener">http://www.devpools.kr/2017/01/31/개발바보들-1화-git-back-to-the-future/</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
             
+
+
+
+    <a data-url="https://yxxnah.github.io/2019/04/19/Git-Troubleshooting/" data-id="cjunub5vr00010d3znt6jymcw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Yoonah Seo"
+        },
+        "headline": "Git Troubleshooting",
+        "image": "https://yxxnah.github.io",
+        "keywords": "git",
+        "genre": "Programming git",
+        "datePublished": "2019-04-19",
+        "dateCreated": "2019-04-19",
+        "dateModified": "2019-04-19",
+        "url": "https://yxxnah.github.io/2019/04/19/Git-Troubleshooting/",
+        "description": "
 git을 사용하면서 자주 부딪혔던 상황들에 대해 정리해보았다.
 
 git 사용 시 자주 만나는 상황들
@@ -177,16 +326,22 @@ git push 가 안됨
 원인 : remote 저장소와 로컬 저장소가 서로 다른 기록을 가지고 있어서
 해결 방법(1) [커밋 전] remote와 동기화 후 코드 수정
   1$ git pull origin master
-  (BEST) pull upstre
-        </p>
-    </div>
+  (BEST) pull upstre"
+        "wordCount": 242
+    }
+</script>
+
 </article>
-    
-        </div>
-    
 
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-    </div></section>
+    
+    </section>
 
 
 
@@ -196,6 +351,19 @@ git push 가 안됨
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="github-card" data-github="yxxnah" data-width="340" data-height="150" data-theme="default"></div>
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/04/18/Java-Study-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Java Study (1)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -349,89 +517,13 @@ git push 가 안됨
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-
-
-
-
-    
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
-    
-    
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
-    
-    
-
-
-
-<!-- Custom Scripts -->
-<script src="/js/main.js"></script>
-
-    </div>
-</body>
-</html>
-li>
-                
-            </ul>
-        </div>
-    </div>
-
-
-            
-        
-    </div>
-</aside>
-
-                </div>
-            </div>
-        </div>
-        <footer id="footer">
-    <div class="container">
-        <div class="container-inner">
-            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-            <div class="credit">
-                <h1 class="logo-wrap">
-                    <a href="/" class="logo"></a>
-                </h1>
-                <p>&copy; 2019 Yoonah Seo</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-            </div>
-            <div class="footer-plugins">
-              
-    
-
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-        
-    
-    <script>
-    var disqus_shortname = 'hexo-theme-hueman';
-    
+    var disqus_url = 'https://yxxnah.github.io/2019/04/19/Git-Troubleshooting/';
     
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
