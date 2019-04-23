@@ -21,7 +21,7 @@
 <meta property="og:description" content="목적: 마이크로서비스 아키텍처 톺아보기 내용 비교 Node.js API 서버 구축  비교 (monolith vs microservices)출처: martinfowler.com 모놀리틱 아키텍처 하나의 프로젝트로 구성된 애플리케이션 (waterfall model) 하나의 서버에 모든 비즈니스 로직이 들어가 있는 형태 서비스 규모가 커지면서 발생하는 각종 이슈">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/decentralised-data.png">
-<meta property="og:updated_time" content="2019-04-19T03:19:30.170Z">
+<meta property="og:updated_time" content="2019-04-23T00:07:50.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MSA(Microservice Architecture)">
 <meta name="twitter:description" content="목적: 마이크로서비스 아키텍처 톺아보기 내용 비교 Node.js API 서버 구축  비교 (monolith vs microservices)출처: martinfowler.com 모놀리틱 아키텍처 하나의 프로젝트로 구성된 애플리케이션 (waterfall model) 하나의 서버에 모든 비즈니스 로직이 들어가 있는 형태 서비스 규모가 커지면서 발생하는 각종 이슈">
@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
 
     <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
     
@@ -79,7 +80,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Tech/">Tech</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/git/">git</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Tech/">Tech</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="https://www.linkedin.com/in/%EC%9C%A4%EC%95%84-%EC%84%9C-a01040179/">About</a>
@@ -246,7 +247,9 @@
 <li><a href="http://guruble.com/마이크로서비스microservice-아키텍처-그것이-뭣이-중헌디/" target="_blank" rel="noopener">http://guruble.com/마이크로서비스microservice-아키텍처-그것이-뭣이-중헌디/</a></li>
 <li><a href="https://docs.microsoft.com/ko-kr/azure/architecture/guide/architecture-styles/microservices" target="_blank" rel="noopener">https://docs.microsoft.com/ko-kr/azure/architecture/guide/architecture-styles/microservices</a></li>
 <li><a href="https://www.slideshare.net/saltynut/building-micro-service-architecture" target="_blank" rel="noopener">https://www.slideshare.net/saltynut/building-micro-service-architecture</a></li>
-<li><a href="http://whatsup.nhnent.com/gd/board/viewByMeta/468/168273?_ssoType=real&amp;_useExternalNetwork=FALSE&amp;_requestMainDomain=nhnent.com&amp;_dynamicStaticURL=http://static.nhnent.com&amp;_defaultSystem=nhnent.com&amp;SPOT_TYPE=NOT_USE_RIGHT_MENU&amp;_defaultSystemTitle=WhatsUP" target="_blank" rel="noopener">http://whatsup.nhnent.com/gd/board/viewByMeta/468/168273?_ssoType=real&amp;_useExternalNetwork=FALSE&amp;_requestMainDomain=nhnent.com&amp;_dynamicStaticURL=http://static.nhnent.com&amp;_defaultSystem=nhnent.com&amp;SPOT_TYPE=NOT_USE_RIGHT_MENU&amp;_defaultSystemTitle=WhatsUP</a><h3 id="Node-js-PHP"><a href="#Node-js-PHP" class="headerlink" title="Node.js  PHP"></a>Node.js <-> PHP</-></h3></li>
+<li><a href="http://whatsup.nhnent.com/gd/board/viewByMeta/468/168273?_ssoType=real&amp;_useExternalNetwork=FALSE&amp;_requestMainDomain=nhnent.com&amp;_dynamicStaticURL=http://static.nhnent.com&amp;_defaultSystem=nhnent.com&amp;SPOT_TYPE=NOT_USE_RIGHT_MENU&amp;_defaultSystemTitle=WhatsUP" target="_blank" rel="noopener">http://whatsup.nhnent.com/gd/board/viewByMeta/468/168273?_ssoType=real&amp;_useExternalNetwork=FALSE&amp;_requestMainDomain=nhnent.com&amp;_dynamicStaticURL=http://static.nhnent.com&amp;_defaultSystem=nhnent.com&amp;SPOT_TYPE=NOT_USE_RIGHT_MENU&amp;_defaultSystemTitle=WhatsUP</a></li>
+</ul>
+<h3 id="Node-js-PHP"><a href="#Node-js-PHP" class="headerlink" title="Node.js  PHP"></a>Node.js <-> PHP</-></h3><ul>
 <li>Node.js 와 PHP 통합 : <a href="https://entwickler.de/webandphp/integrating-node-js-with-php-125830.html" target="_blank" rel="noopener">https://entwickler.de/webandphp/integrating-node-js-with-php-125830.html</a></li>
 <li>socket.io : <a href="https://poiemaweb.com/nodejs-socketio" target="_blank" rel="noopener">https://poiemaweb.com/nodejs-socketio</a></li>
 <li>Node.js -&gt; PHP 모듈 실행 : <a href="https://medium.com/@MartinMouritzen/how-to-run-php-in-node-js-and-why-you-probably-shouldnt-do-that-fb12abe955b0" target="_blank" rel="noopener">https://medium.com/@MartinMouritzen/how-to-run-php-in-node-js-and-why-you-probably-shouldnt-do-that-fb12abe955b0</a></li>
@@ -259,7 +262,7 @@
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/" data-id="cjunub5w6000b0d3z8ccvb17w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/" data-id="cjut1ev68000dgq3z7jrboecj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -335,7 +338,7 @@
         "genre": "Programming Tech",
         "datePublished": "2019-04-17",
         "dateCreated": "2019-04-17",
-        "dateModified": "2019-04-19",
+        "dateModified": "2019-04-23",
         "url": "https://yxxnah.github.io/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/",
         "description": "목적: 마이크로서비스 아키텍처 톺아보기
 내용
@@ -386,9 +389,9 @@ Node.js API 서버 구축
     </a>
     
     
-        <a href="/2019/04/16/Git-Branch-Strategy-3/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/04/08/Git-Branch-Strategy-2/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Git Branch Strategy (3)</p>
+        <p class="article-nav-title">Git Branch Strategy (2)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -410,7 +413,16 @@ Node.js API 서버 구축
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/git/">git</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a></p>
+                            <p class="item-title"><a href="/2019/04/22/Java-Study-2/" class="title">Java Study (2)</a></p>
+                            <p class="item-date"><time datetime="2019-04-22T09:20:19.000Z" itemprop="datePublished">2019-04-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Git/">Git</a></p>
                             <p class="item-title"><a href="/2019/04/19/Git-Troubleshooting/" class="title">Git Troubleshooting</a></p>
                             <p class="item-date"><time datetime="2019-04-19T08:54:45.000Z" itemprop="datePublished">2019-04-19</time></p>
                         </div>
@@ -443,15 +455,6 @@ Node.js API 서버 구축
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Git/">Git</a></p>
-                            <p class="item-title"><a href="/2019/04/16/Git-Branch-Strategy-3/" class="title">Git Branch Strategy (3)</a></p>
-                            <p class="item-date"><time datetime="2019-04-15T23:53:16.000Z" itemprop="datePublished">2019-04-16</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -461,7 +464,7 @@ Node.js API 서버 구축
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Git/">Git</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Tech/">Tech</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/git/">git</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Git/">Git</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Tech/">Tech</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -481,7 +484,7 @@ Node.js API 서버 구축
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSA/">MSA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSA/">MSA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -491,7 +494,7 @@ Node.js API 서버 구축
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/MSA/" style="font-size: 10px;">MSA</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a> <a href="/tags/git/" style="font-size: 10px;">git</a>
+            <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/MSA/" style="font-size: 10px;">MSA</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a>
         </div>
     </div>
 
