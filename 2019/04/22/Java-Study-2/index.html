@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="DEV:archive">
 <meta property="og:description" content="CollectionCollection Framework 다수의 데이터를 쉽고 효과적으로 처리할 수 있는 표준화된 방법을 제공하는 클래스의 집합  Collection Class 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것 인터페이스(interface)로 이미 구현이 되어있어서 쓰기만 하면 됨&amp;#128583;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-23T10:20:51.793Z">
+<meta property="og:updated_time" content="2019-04-23T11:25:57.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Study - 2회차">
 <meta name="twitter:description" content="CollectionCollection Framework 다수의 데이터를 쉽고 효과적으로 처리할 수 있는 표준화된 방법을 제공하는 클래스의 집합  Collection Class 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것 인터페이스(interface)로 이미 구현이 되어있어서 쓰기만 하면 됨&amp;#128583;">
@@ -194,15 +194,10 @@
 </ul>
 <h1 id="주요-인터페이스"><a href="#주요-인터페이스" class="headerlink" title="주요 인터페이스"></a>주요 인터페이스</h1><h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><ul>
 <li>요소의 저장 순서가 유지되며 중복을 허용한다.</li>
-<li>ArrayList, LinkedList, Stack, Queue, Vector(사용도 낮음)</li>
-<li>예제 코드 <code>ArrayListSample.java</code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayListSample</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Sorting with natural order"</span>);</span><br><span class="line">    List&lt;String&gt; l1 = createList();</span><br><span class="line">    l1.sort(<span class="keyword">null</span>); <span class="comment">// 오름차순 정렬</span></span><br><span class="line">    l1.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"Sorting with a lamba expression for the comparison"</span>);</span><br><span class="line">    List&lt;String&gt; l2 = createList();</span><br><span class="line">    l2.sort((s1, s2) -&gt; s1.compareToIgnoreCase(s2)); <span class="comment">// sort ignoring case</span></span><br><span class="line">    l2.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"Sorting with a method references"</span>);</span><br><span class="line">    List&lt;String&gt; l3 = createList();</span><br><span class="line">    l3.sort(String::compareToIgnoreCase);</span><br><span class="line">    l3.forEach(System.out::println);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> List&lt;String&gt; <span class="title">createList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Arrays.asList(<span class="string">"iPhone"</span>, <span class="string">"Ubuntu"</span>, <span class="string">"Android"</span>, <span class="string">"Mac OS X"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>ArrayList, LinkedList(single/double), Stack, Queue, Vector(사용도 낮음)</li>
+<li>예제 코드 <code>ArrayListSample.java</code><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3></li>
+<li>인덱스를 사용하여 데이터를 빠르게 찾을 수 있다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayListSample</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Sorting with natural order"</span>);</span><br><span class="line">    List&lt;String&gt; l1 = createList();</span><br><span class="line">    l1.sort(<span class="keyword">null</span>); <span class="comment">// 오름차순 정렬</span></span><br><span class="line">    l1.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"Sorting with a lamba expression for the comparison"</span>);</span><br><span class="line">    List&lt;String&gt; l2 = createList();</span><br><span class="line">    l2.sort((s1, s2) -&gt; s1.compareToIgnoreCase(s2)); <span class="comment">// sort ignoring case</span></span><br><span class="line">    l2.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"Sorting with a method references"</span>);</span><br><span class="line">    List&lt;String&gt; l3 = createList();</span><br><span class="line">    l3.sort(String::compareToIgnoreCase);</span><br><span class="line">    l3.forEach(System.out::println);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> List&lt;String&gt; <span class="title">createList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Arrays.asList(<span class="string">"iPhone"</span>, <span class="string">"Ubuntu"</span>, <span class="string">"Android"</span>, <span class="string">"Mac OS X"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><ul>
-<li>인덱스를 사용하여 데이터를 빠르게 찾을 수 있다.</li>
-</ul>
-<h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><ul>
-<li>배열의 단점 보완, 단일/이중 연결 리스트가 있다.</li>
 </ul>
 <h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><ul>
 <li>key/value 로 이루어진 데이터의 집합</li>
@@ -211,13 +206,16 @@
 </li>
 </ul>
 <h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><ul>
-<li>순서가 없는 데이터의 집합</li>
-<li>중복 불가</li>
+<li>순서가 없으며 중복 허용하지 않음</li>
 <li>HashSet, TreeSet</li>
+</ul>
+<h2 id="정리하면서-느낀-점"><a href="#정리하면서-느낀-점" class="headerlink" title="정리하면서 느낀 점"></a>정리하면서 느낀 점</h2><ul>
+<li>컬렉션이 탄생한 배경에 대해 생각해보게 되었다!<br>=&gt; 많은 데이터를 어떻게 효율적으로 다룰지가 근본적인 등장 배경</li>
+<li><code>무엇을, 어떻게?</code>를 생각하며 사용해야 좋을 것 같다.<br>=&gt; 설계 단계에서 중요할 듯 하다.</li>
 </ul>
 <h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><ul>
 <li>컬렉션 프레임워크 : <a href="http://tcpschool.com/java/java_collectionFramework_concept" target="_blank" rel="noopener">http://tcpschool.com/java/java_collectionFramework_concept</a></li>
-<li>구현 예제 : <a href="https://www.vogella.com/tutorials/JavaCollections/article.html#map_convert" target="_blank" rel="noopener">https://www.vogella.com/tutorials/JavaCollections/article.html#map_convert</a></li>
+<li>구현 예제 모음 : <a href="https://www.vogella.com/tutorials/JavaCollections/article.html" target="_blank" rel="noopener">https://www.vogella.com/tutorials/JavaCollections/article.html</a></li>
 </ul>
 
         </div>
@@ -311,7 +309,7 @@ Collection Class
 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것
 인터페이스(interface)로 이미 구현이 되어있어서 쓰기만 하면 됨&#128583;
 "
-        "wordCount": 540
+        "wordCount": 563
     }
 </script>
 
