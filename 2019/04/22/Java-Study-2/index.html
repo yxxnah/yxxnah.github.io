@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="DEV:archive">
 <meta property="og:description" content="CollectionCollection Framework 다수의 데이터를 쉽고 효과적으로 처리할 수 있는 표준화된 방법을 제공하는 클래스의 집합  Collection Class 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것 인터페이스(interface)로 이미 구현이 되어있어서 쓰기만 하면 됨&amp;#128583;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-23T11:25:57.778Z">
+<meta property="og:updated_time" content="2019-04-24T00:28:09.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Study - 2회차">
 <meta name="twitter:description" content="CollectionCollection Framework 다수의 데이터를 쉽고 효과적으로 처리할 수 있는 표준화된 방법을 제공하는 클래스의 집합  Collection Class 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것 인터페이스(interface)로 이미 구현이 되어있어서 쓰기만 하면 됨&amp;#128583;">
@@ -205,17 +205,21 @@
 <li>예제 코드 <code>MapSample.java</code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MapSample</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    Map&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    fillData(map);</span><br><span class="line"></span><br><span class="line">    map.forEach((k, v) -&gt; System.out.printf(<span class="string">"%s %s%n"</span>, k, v));</span><br><span class="line"></span><br><span class="line">    map.put(<span class="string">"Grape"</span>, <span class="string">"Fruit"</span>);</span><br><span class="line">    map.remove(<span class="string">"Cat"</span>); <span class="comment">// key 값에 해당하는 데이터 삭제</span></span><br><span class="line"></span><br><span class="line">    map.forEach((k, v) -&gt; System.out.printf(<span class="string">"%s %s%n"</span>, k, v));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fillData</span><span class="params">(Map&lt;String, String&gt; map)</span> </span>&#123;</span><br><span class="line">    map.put(<span class="string">"Apple"</span>, <span class="string">"Fruit"</span>);</span><br><span class="line">    map.put(<span class="string">"Dog"</span>, <span class="string">"Animal"</span>);</span><br><span class="line">    map.put(<span class="string">"Orange"</span>, <span class="string">"Fruit"</span>);</span><br><span class="line">    map.put(<span class="string">"Cat"</span>, <span class="string">"Animal"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="HashMap-Hashtable"><a href="#HashMap-Hashtable" class="headerlink" title="HashMap / Hashtable"></a>HashMap / Hashtable</h3><ul>
+<li><a href="https://d2.naver.com/helloworld/831311" target="_blank" rel="noopener">Map 컬렉션 - HashMap, Hashtable</a></li>
+<li><a href="https://youtu.be/xls6jEZNA7Y" target="_blank" rel="noopener">HashTable 개념 5분만에 이해하기</a></li>
+</ul>
 <h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><ul>
 <li>순서가 없으며 중복 허용하지 않음</li>
 <li>HashSet, TreeSet</li>
 </ul>
 <h2 id="정리하면서-느낀-점"><a href="#정리하면서-느낀-점" class="headerlink" title="정리하면서 느낀 점"></a>정리하면서 느낀 점</h2><ul>
 <li>컬렉션이 탄생한 배경에 대해 생각해보게 되었다!<br>=&gt; 많은 데이터를 어떻게 효율적으로 다룰지가 근본적인 등장 배경</li>
-<li><code>무엇을, 어떻게?</code>를 생각하며 사용해야 좋을 것 같다.<br>=&gt; 설계 단계에서 중요할 듯 하다.</li>
+<li><code>무엇을, 어떻게?</code>를 생각하며 적재적소에 사용하자.<br>=&gt; 설계 단계에서 중요할 듯 하다.</li>
 </ul>
 <h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><ul>
-<li>컬렉션 프레임워크 : <a href="http://tcpschool.com/java/java_collectionFramework_concept" target="_blank" rel="noopener">http://tcpschool.com/java/java_collectionFramework_concept</a></li>
-<li>구현 예제 모음 : <a href="https://www.vogella.com/tutorials/JavaCollections/article.html" target="_blank" rel="noopener">https://www.vogella.com/tutorials/JavaCollections/article.html</a></li>
+<li><a href="http://tcpschool.com/java/java_collectionFramework_concept" target="_blank" rel="noopener">Collection Framework 정리</a></li>
+<li><a href="https://www.vogella.com/tutorials/JavaCollections/article.html" target="_blank" rel="noopener">Collection 구현 예제 모음</a></li>
 </ul>
 
         </div>
@@ -224,7 +228,7 @@
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/04/22/Java-Study-2/" data-id="cjutn57tb00072q3zkofwl36g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/04/22/Java-Study-2/" data-id="cjuuhdtbs000a8w3znqfc4ili" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -300,7 +304,7 @@
         "genre": "Programming Java",
         "datePublished": "2019-04-22",
         "dateCreated": "2019-04-22",
-        "dateModified": "2019-04-23",
+        "dateModified": "2019-04-24",
         "url": "https://yxxnah.github.io/2019/04/22/Java-Study-2/",
         "description": "CollectionCollection Framework
 다수의 데이터를 쉽고 효과적으로 처리할 수 있는 표준화된 방법을 제공하는 클래스의 집합
@@ -309,7 +313,7 @@ Collection Class
 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것
 인터페이스(interface)로 이미 구현이 되어있어서 쓰기만 하면 됨&#128583;
 "
-        "wordCount": 563
+        "wordCount": 580
     }
 </script>
 
