@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="DEV:archive">
 <meta property="og:description" content="CollectionCollection Framework 다수의 데이터를 쉽고 효과적으로 처리할 수 있는 표준화된 방법을 제공하는 클래스의 집합  Collection Class 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것 인터페이스(interface)로 이미 구현이 되어있어서 적재적소에 사용하면 됨 &amp;#128">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-24T05:10:37.639Z">
+<meta property="og:updated_time" content="2019-04-24T11:12:03.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Study - 2회차">
 <meta name="twitter:description" content="CollectionCollection Framework 다수의 데이터를 쉽고 효과적으로 처리할 수 있는 표준화된 방법을 제공하는 클래스의 집합  Collection Class 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것 인터페이스(interface)로 이미 구현이 되어있어서 적재적소에 사용하면 됨 &amp;#128">
@@ -78,7 +78,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Tech/">Tech</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Git/">Git</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Git/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Tech/">Tech</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="https://www.linkedin.com/in/%EC%9C%A4%EC%95%84-%EC%84%9C-a01040179/">About</a>
@@ -196,6 +196,11 @@
 <li>요소의 저장 순서가 유지되며 <u>중복을 허용</u>한다.</li>
 <li>ArrayList, LinkedList(single/double), Stack, Queue, Vector(사용도 낮음)</li>
 <li>예제 코드 <code>ArrayListSample.java</code><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3></li>
+<li>Array vs ArrayList<ul>
+<li>Array : 초기화 시 크기를 지정한다.</li>
+<li>ArrayList : 크기가 가변적이다.</li>
+</ul>
+</li>
 <li>인덱스를 사용하여 데이터를 빠르게 찾을 수 있다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayListSample</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Sorting with natural order"</span>);</span><br><span class="line">    List&lt;String&gt; l1 = createList();</span><br><span class="line">    l1.sort(<span class="keyword">null</span>); <span class="comment">// 오름차순 정렬</span></span><br><span class="line">    l1.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"Sorting with a lamba expression for the comparison"</span>);</span><br><span class="line">    List&lt;String&gt; l2 = createList();</span><br><span class="line">    l2.sort((s1, s2) -&gt; s1.compareToIgnoreCase(s2)); <span class="comment">// sort ignoring case</span></span><br><span class="line">    l2.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"Sorting with a method references"</span>);</span><br><span class="line">    List&lt;String&gt; l3 = createList();</span><br><span class="line">    l3.sort(String::compareToIgnoreCase);</span><br><span class="line">    l3.forEach(System.out::println);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> List&lt;String&gt; <span class="title">createList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Arrays.asList(<span class="string">"iPhone"</span>, <span class="string">"Ubuntu"</span>, <span class="string">"Android"</span>, <span class="string">"Mac OS X"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -228,7 +233,7 @@
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/04/22/Java-Study-2/" data-id="cjuuyv57j0005xp3zf2odw1r6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/04/22/Java-Study-2/" data-id="cjvd602i800070b3zvecpt4jt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -312,7 +317,7 @@
 Collection Class
 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것
 인터페이스(interface)로 이미 구현이 되어있어서 적재적소에 사용하면 됨 &#128"
-        "wordCount": 580
+        "wordCount": 590
     }
 </script>
 
@@ -340,6 +345,16 @@ Collection Class
         
 <nav id="article-nav">
     
+        <a href="/2019/05/07/Git-Management-Policy/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Git 운용 정책 개선
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/04/19/Git-Troubleshooting/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -361,6 +376,15 @@ Collection Class
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Git/">Git</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Git/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/05/07/Git-Management-Policy/" class="title">Git 운용 정책 개선</a></p>
+                            <p class="item-date"><time datetime="2019-05-07T02:14:51.000Z" itemprop="datePublished">2019-05-07</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -398,15 +422,6 @@ Collection Class
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Tech/">Tech</a></p>
-                            <p class="item-title"><a href="/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/" class="title">MSA(Microservice Architecture)</a></p>
-                            <p class="item-date"><time datetime="2019-04-17T08:02:55.000Z" itemprop="datePublished">2019-04-17</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -416,7 +431,7 @@ Collection Class
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Git/">Git</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Tech/">Tech</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/Programming/">Programming</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Git/">Git</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Tech/">Tech</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -426,7 +441,7 @@ Collection Class
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -436,7 +451,7 @@ Collection Class
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSA/">MSA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSA/">MSA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
