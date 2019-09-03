@@ -6,24 +6,24 @@
     
 
     
-    <title>Regular Expression | DEV:archive</title>
+    <title>Web Crawling (1) Regular Expression | DEV:archive</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="python,정규식">
     
-    <meta name="description" content="Regular Expression정규식(Regular Expression) 문자열 추출을 위해 작성하는 표현식 정규식을 활용하여 얼마든지 원하는 패턴의 문자열을 추출해낼 수 있다. Python도 정규식을 위한 모듈을 제공하고 있다.12import re# code   핵심 정규식 표현 ^ : 문자열의 시작 $ : 문자열의 끝 . : 문자 \s : 공백 \S">
+    <meta name="description" content="정규식(Regular Expression) 문자열 추출을 위해 작성하는 표현식 정규식을 활용하여 얼마든지 원하는 패턴의 문자열을 추출해낼 수 있다. Python도 정규식을 위한 모듈을 제공하고 있다.12import re# code   핵심 정규식 표현 ^ : 문자열의 시작 $ : 문자열의 끝 . : 문자 \s : 공백 \S : 공백 없는 문자열  : 0 이">
 <meta name="keywords" content="python,정규식">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Regular Expression">
+<meta property="og:title" content="Web Crawling (1) Regular Expression">
 <meta property="og:url" content="https://yxxnah.github.io/2019/09/01/Regular-Expression/index.html">
 <meta property="og:site_name" content="DEV:archive">
-<meta property="og:description" content="Regular Expression정규식(Regular Expression) 문자열 추출을 위해 작성하는 표현식 정규식을 활용하여 얼마든지 원하는 패턴의 문자열을 추출해낼 수 있다. Python도 정규식을 위한 모듈을 제공하고 있다.12import re# code   핵심 정규식 표현 ^ : 문자열의 시작 $ : 문자열의 끝 . : 문자 \s : 공백 \S">
+<meta property="og:description" content="정규식(Regular Expression) 문자열 추출을 위해 작성하는 표현식 정규식을 활용하여 얼마든지 원하는 패턴의 문자열을 추출해낼 수 있다. Python도 정규식을 위한 모듈을 제공하고 있다.12import re# code   핵심 정규식 표현 ^ : 문자열의 시작 $ : 문자열의 끝 . : 문자 \s : 공백 \S : 공백 없는 문자열  : 0 이">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-01T10:32:56.428Z">
+<meta property="og:updated_time" content="2019-09-02T09:06:50.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Regular Expression">
-<meta name="twitter:description" content="Regular Expression정규식(Regular Expression) 문자열 추출을 위해 작성하는 표현식 정규식을 활용하여 얼마든지 원하는 패턴의 문자열을 추출해낼 수 있다. Python도 정규식을 위한 모듈을 제공하고 있다.12import re# code   핵심 정규식 표현 ^ : 문자열의 시작 $ : 문자열의 끝 . : 문자 \s : 공백 \S">
+<meta name="twitter:title" content="Web Crawling (1) Regular Expression">
+<meta name="twitter:description" content="정규식(Regular Expression) 문자열 추출을 위해 작성하는 표현식 정규식을 활용하여 얼마든지 원하는 패턴의 문자열을 추출해낼 수 있다. Python도 정규식을 위한 모듈을 제공하고 있다.12import re# code   핵심 정규식 표현 ^ : 문자열의 시작 $ : 문자열의 끝 . : 문자 \s : 공백 \S : 공백 없는 문자열  : 0 이">
     
 
     
@@ -149,7 +149,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-        Regular Expression
+        Web Crawling (1) Regular Expression
         </h1>
     
 
@@ -176,7 +176,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Regular-Expression"><a href="#Regular-Expression" class="headerlink" title="Regular Expression"></a>Regular Expression</h1><h2 id="정규식-Regular-Expression"><a href="#정규식-Regular-Expression" class="headerlink" title="정규식(Regular Expression)"></a>정규식(Regular Expression)</h2><ul>
+            <h2 id="정규식-Regular-Expression"><a href="#정규식-Regular-Expression" class="headerlink" title="정규식(Regular Expression)"></a>정규식(Regular Expression)</h2><ul>
 <li>문자열 추출을 위해 작성하는 표현식</li>
 <li>정규식을 활용하여 얼마든지 원하는 패턴의 문자열을 추출해낼 수 있다.</li>
 <li>Python도 정규식을 위한 모듈을 제공하고 있다.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment"># code</span></span><br></pre></td></tr></table></figure>
@@ -214,8 +214,8 @@
 </li>
 </ul>
 <h2 id="내장-함수"><a href="#내장-함수" class="headerlink" title="내장 함수"></a>내장 함수</h2><ul>
-<li>re.search() : 정규식 패턴과 매칭되는 문자열을 반환</li>
-<li>re.findall() : 정규식 패턴과 매칭되는 문자를 리스트로 반환(매칭되는 문자열이 없다면 빈 리스트 반환)</li>
+<li>re.search() : 정규식 패턴과 매칭되는 문자열을 반환한다.</li>
+<li>re.findall() : 정규식 패턴과 매칭되는 문자를 리스트로 반환한다.(매칭되는 문자열이 없다면 빈 리스트 반환)</li>
 </ul>
 <h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><ul>
 <li><a href="http://www.py4e.com" target="_blank" rel="noopener">PY4E - Python for Everybody</a></li>
@@ -227,7 +227,7 @@
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/09/01/Regular-Expression/" data-id="ck00u8bq1000hg63zg2jbk40i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/09/01/Regular-Expression/" data-id="ck03gw7w7000iem3z0j7wbm87" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -297,15 +297,15 @@
             "@type": "Person",
             "name": "Yoonah Seo"
         },
-        "headline": "Regular Expression",
+        "headline": "Web Crawling (1) Regular Expression",
         "image": "https://yxxnah.github.io",
         "keywords": "python 정규식",
         "genre": "Programming python",
         "datePublished": "2019-09-01",
         "dateCreated": "2019-09-01",
-        "dateModified": "2019-09-01",
+        "dateModified": "2019-09-02",
         "url": "https://yxxnah.github.io/2019/09/01/Regular-Expression/",
-        "description": "Regular Expression정규식(Regular Expression)
+        "description": "정규식(Regular Expression)
 문자열 추출을 위해 작성하는 표현식
 정규식을 활용하여 얼마든지 원하는 패턴의 문자열을 추출해낼 수 있다.
 Python도 정규식을 위한 모듈을 제공하고 있다.12import re# code
@@ -316,8 +316,10 @@ Python도 정규식을 위한 모듈을 제공하고 있다.12import re# code
 $ : 문자열의 끝
 . : 문자
 \s : 공백
-\S "
-        "wordCount": 168
+\S : 공백 없는 문자열
+
+: 0 이"
+        "wordCount": 162
     }
 </script>
 
@@ -345,6 +347,16 @@ $ : 문자열의 끝
         
 <nav id="article-nav">
     
+        <a href="/2019/09/02/Web-Crawling-2-BeautifulSoup/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Web Crawling (2) BeautifulSoup
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/05/07/Git-Management-Policy/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -371,7 +383,16 @@ $ : 문자열의 끝
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/python/">python</a></p>
-                            <p class="item-title"><a href="/2019/09/01/Regular-Expression/" class="title">Regular Expression</a></p>
+                            <p class="item-title"><a href="/2019/09/02/Web-Crawling-2-BeautifulSoup/" class="title">Web Crawling (2) BeautifulSoup</a></p>
+                            <p class="item-date"><time datetime="2019-09-02T09:07:44.000Z" itemprop="datePublished">2019-09-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/python/">python</a></p>
+                            <p class="item-title"><a href="/2019/09/01/Regular-Expression/" class="title">Web Crawling (1) Regular Expression</a></p>
                             <p class="item-date"><time datetime="2019-09-01T10:29:53.000Z" itemprop="datePublished">2019-09-01</time></p>
                         </div>
                     </li>
@@ -403,15 +424,6 @@ $ : 문자열의 끝
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a></p>
-                            <p class="item-title"><a href="/2019/04/18/Java-Study-1/" class="title">Java Study - 1회차</a></p>
-                            <p class="item-date"><time datetime="2019-04-18T10:12:46.000Z" itemprop="datePublished">2019-04-18</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -421,7 +433,7 @@ $ : 문자열의 끝
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/Programming/">Programming</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Git/">Git</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Tech/">Tech</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/python/">python</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/Programming/">Programming</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Git/">Git</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Tech/">Tech</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/python/">python</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -431,7 +443,7 @@ $ : 문자열의 끝
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -441,7 +453,7 @@ $ : 문자열의 끝
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSA/">MSA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/정규식/">정규식</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSA/">MSA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/정규식/">정규식</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -451,7 +463,7 @@ $ : 문자열의 끝
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/MSA/" style="font-size: 10px;">MSA</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/정규식/" style="font-size: 10px;">정규식</a>
+            <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/MSA/" style="font-size: 10px;">MSA</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/정규식/" style="font-size: 10px;">정규식</a>
         </div>
     </div>
 
