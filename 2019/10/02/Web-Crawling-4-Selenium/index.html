@@ -6,24 +6,24 @@
     
 
     
-    <title>REST API | DEV:archive</title>
+    <title>파이썬으로 웹 크롤링(Web Crawling) 하기(4) Selenium 사용하기 | DEV:archive</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Tech">
+        <meta name="keywords" content="python">
     
-    <meta name="description" content="들어가기 전기존에 운영 중이던 API 시스템을 개선하고자 검토했던 내용이다.당시 REST의 개념을 정확히 알고 있지 못한 상태여서 개념부터 차근차근 정리했었는데 기록으로도 남겨보자 싶었다. REST(Representational Safe Transfer) HTTP URL로 표현된 리소스에 대한 행위를 HTTP Method로 정의한다. 리소스, 메소드, 메시">
-<meta name="keywords" content="Tech">
+    <meta name="description" content="Selenium(셀레니움)요약 BeautifulSoup을 사용하여 크롤링을 할 수 있지만, 내용이 모두 로드된 페이지를 대상으로만 가능하다. 원하는 동작 수행 후(ex. 특정 키워드로 검색한 결과 페이지) 결과를 크롤링 하는 경우가 대부분이기 때문에 이 방법으로만은 한계가 있다. 셀레니움으로는 브라우저를 컨트롤 할 수 있다.설치: pip 혹은 pip3 으로">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="REST API">
-<meta property="og:url" content="https://yxxnah.github.io/2019/04/18/REST-API/index.html">
+<meta property="og:title" content="파이썬으로 웹 크롤링(Web Crawling) 하기(4) Selenium 사용하기">
+<meta property="og:url" content="https://yxxnah.github.io/2019/10/02/Web-Crawling-4-Selenium/index.html">
 <meta property="og:site_name" content="DEV:archive">
-<meta property="og:description" content="들어가기 전기존에 운영 중이던 API 시스템을 개선하고자 검토했던 내용이다.당시 REST의 개념을 정확히 알고 있지 못한 상태여서 개념부터 차근차근 정리했었는데 기록으로도 남겨보자 싶었다. REST(Representational Safe Transfer) HTTP URL로 표현된 리소스에 대한 행위를 HTTP Method로 정의한다. 리소스, 메소드, 메시">
+<meta property="og:description" content="Selenium(셀레니움)요약 BeautifulSoup을 사용하여 크롤링을 할 수 있지만, 내용이 모두 로드된 페이지를 대상으로만 가능하다. 원하는 동작 수행 후(ex. 특정 키워드로 검색한 결과 페이지) 결과를 크롤링 하는 경우가 대부분이기 때문에 이 방법으로만은 한계가 있다. 셀레니움으로는 브라우저를 컨트롤 할 수 있다.설치: pip 혹은 pip3 으로">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-18T10:12:52.889Z">
+<meta property="og:updated_time" content="2019-10-02T12:35:04.559Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="REST API">
-<meta name="twitter:description" content="들어가기 전기존에 운영 중이던 API 시스템을 개선하고자 검토했던 내용이다.당시 REST의 개념을 정확히 알고 있지 못한 상태여서 개념부터 차근차근 정리했었는데 기록으로도 남겨보자 싶었다. REST(Representational Safe Transfer) HTTP URL로 표현된 리소스에 대한 행위를 HTTP Method로 정의한다. 리소스, 메소드, 메시">
+<meta name="twitter:title" content="파이썬으로 웹 크롤링(Web Crawling) 하기(4) Selenium 사용하기">
+<meta name="twitter:description" content="Selenium(셀레니움)요약 BeautifulSoup을 사용하여 크롤링을 할 수 있지만, 내용이 모두 로드된 페이지를 대상으로만 가능하다. 원하는 동작 수행 후(ex. 특정 키워드로 검색한 결과 페이지) 결과를 크롤링 하는 경우가 대부분이기 때문에 이 방법으로만은 한계가 있다. 셀레니움으로는 브라우저를 컨트롤 할 수 있다.설치: pip 혹은 pip3 으로">
     
 
     
@@ -137,19 +137,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Tech/">Tech</a>
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/python/">python</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-REST-API" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Web-Crawling-4-Selenium" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        REST API
+        파이썬으로 웹 크롤링(Web Crawling) 하기(4) Selenium 사용하기
         </h1>
     
 
@@ -159,8 +159,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/04/18/REST-API/" class="article-date">
-            <time datetime="2019-04-18T02:49:14.000Z" itemprop="datePublished">2019-04-18</time>
+        <a href="/2019/10/02/Web-Crawling-4-Selenium/" class="article-date">
+            <time datetime="2019-10-02T12:20:11.000Z" itemprop="datePublished">2019-10-02</time>
         </a>
     </div>
 
@@ -169,35 +169,23 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Tech/">Tech</a>
+        <a class="tag-link" href="/tags/python/">python</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="들어가기-전"><a href="#들어가기-전" class="headerlink" title="들어가기 전"></a>들어가기 전</h2><p>기존에 운영 중이던 API 시스템을 개선하고자 검토했던 내용이다.<br>당시 <code>REST</code>의 개념을 정확히 알고 있지 못한 상태여서 개념부터 차근차근 정리했었는데 기록으로도 남겨보자 싶었다.</p>
-<h2 id="REST-Representational-Safe-Transfer"><a href="#REST-Representational-Safe-Transfer" class="headerlink" title="REST(Representational Safe Transfer)"></a>REST(Representational Safe Transfer)</h2><ul>
-<li>HTTP URL로 표현된 리소스에 대한 행위를 HTTP Method로 정의한다.<blockquote>
-<p>리소스, 메소드, 메시지로 구성</p>
-</blockquote>
-</li>
-<li><p>여기서 리소스(Resource)는 시스템 or 서비스마다 정의하는 방법이 다양해질 수 있다.</p>
-<blockquote>
-<p>개인적으로 이거 정의하기가 너무 어려웠다! 귀에 걸면 귀걸이, 코에 걸면 코걸이..</p>
-</blockquote>
-</li>
-<li><p>Stateless : 클라이언트의 데이터를 서버에 의존하지 않도록 구현 &gt; 단순한 기능을 수행하는 API 작성</p>
+            <h1 id="Selenium-셀레니움"><a href="#Selenium-셀레니움" class="headerlink" title="Selenium(셀레니움)"></a>Selenium(셀레니움)</h1><h2 id="요약"><a href="#요약" class="headerlink" title="요약"></a>요약</h2><ul>
+<li><code>BeautifulSoup</code>을 사용하여 크롤링을 할 수 있지만, 내용이 모두 로드된 페이지를 대상으로만 가능하다.</li>
+<li>원하는 동작 수행 후(ex. 특정 키워드로 검색한 결과 페이지) 결과를 크롤링 하는 경우가 대부분이기 때문에 이 방법으로만은 한계가 있다.</li>
+<li>셀레니움으로는 브라우저를 컨트롤 할 수 있다.<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2>: <code>pip</code> 혹은 <code>pip3</code> 으로 모듈 설치<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip3 install selenium</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="구성-요소"><a href="#구성-요소" class="headerlink" title="구성 요소"></a>구성 요소</h3><ul>
-<li>자원(RESOURCE) - URI</li>
-<li>행위(Verb) - HTTP METHOD</li>
-<li>표현(Representations)</li>
-</ul>
-<h3 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h3><ul>
-<li>URI는 정보의 자원을 표현해야 한다.</li>
-<li>자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE)로 표현한다.</li>
+<h2 id="Browser-Driver-Chrome-설치"><a href="#Browser-Driver-Chrome-설치" class="headerlink" title="Browser Driver(Chrome) 설치"></a>Browser Driver(Chrome) 설치</h2><ul>
+<li>셀레니움을 사용하기 위해서는 브라우저 드라이브가 필요한데, 나는 크롬으로 해보았다.</li>
+<li>크롬 브라우저 다운로드 : <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></li>
+<li><code>다운로드 &gt; 압축 해제</code> 후 프로젝트 경로에 실행 파일을 위치시켜주면 된다.</li>
 </ul>
 
         </div>
@@ -206,7 +194,7 @@
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/04/18/REST-API/" data-id="ck199799b000ih73ztc8wpqj9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/10/02/Web-Crawling-4-Selenium/" data-id="ck199799g000sh73znh8ep82i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -276,19 +264,19 @@
             "@type": "Person",
             "name": "Yoonah Seo"
         },
-        "headline": "REST API",
+        "headline": "파이썬으로 웹 크롤링(Web Crawling) 하기(4) Selenium 사용하기",
         "image": "https://yxxnah.github.io",
-        "keywords": "Tech",
-        "genre": "Programming Tech",
-        "datePublished": "2019-04-18",
-        "dateCreated": "2019-04-18",
-        "dateModified": "2019-04-18",
-        "url": "https://yxxnah.github.io/2019/04/18/REST-API/",
-        "description": "들어가기 전기존에 운영 중이던 API 시스템을 개선하고자 검토했던 내용이다.당시 REST의 개념을 정확히 알고 있지 못한 상태여서 개념부터 차근차근 정리했었는데 기록으로도 남겨보자 싶었다.
-REST(Representational Safe Transfer)
-HTTP URL로 표현된 리소스에 대한 행위를 HTTP Method로 정의한다.
-리소스, 메소드, 메시"
-        "wordCount": 105
+        "keywords": "python",
+        "genre": "Programming python",
+        "datePublished": "2019-10-02",
+        "dateCreated": "2019-10-02",
+        "dateModified": "2019-10-02",
+        "url": "https://yxxnah.github.io/2019/10/02/Web-Crawling-4-Selenium/",
+        "description": "Selenium(셀레니움)요약
+BeautifulSoup을 사용하여 크롤링을 할 수 있지만, 내용이 모두 로드된 페이지를 대상으로만 가능하다.
+원하는 동작 수행 후(ex. 특정 키워드로 검색한 결과 페이지) 결과를 크롤링 하는 경우가 대부분이기 때문에 이 방법으로만은 한계가 있다.
+셀레니움으로는 브라우저를 컨트롤 할 수 있다.설치: pip 혹은 pip3 으로"
+        "wordCount": 95
     }
 </script>
 
@@ -316,20 +304,10 @@ HTTP URL로 표현된 리소스에 대한 행위를 HTTP Method로 정의한다.
         
 <nav id="article-nav">
     
-        <a href="/2019/04/18/Java-Study-1/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Java Study - 1회차
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/10/02/Web-Crawling-3-Database/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">MSA(Microservice Architecture)</p>
+        <p class="article-nav-title">파이썬으로 웹 크롤링(Web Crawling) 하기(3) Database</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -488,7 +466,7 @@ HTTP URL로 표현된 리소스에 대한 행위를 HTTP Method로 정의한다.
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://yxxnah.github.io/2019/04/18/REST-API/';
+    var disqus_url = 'https://yxxnah.github.io/2019/10/02/Web-Crawling-4-Selenium/';
     
     (function() {
     var dsq = document.createElement('script');
