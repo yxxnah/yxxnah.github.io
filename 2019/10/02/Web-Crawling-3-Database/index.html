@@ -6,17 +6,25 @@
     
 
     
-    <title>Category: Tech | DEV:archive</title>
+    <title>Web Crawling (3) Database | DEV:archive</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="DEV:archive">
-<meta property="og:url" content="https://yxxnah.github.io/categories/Programming/Tech/index.html">
+        <meta name="keywords" content>
+    
+    <meta name="description" content="크롤링한 데이터를 DB에 저장하기 API를 호출하여 JSON 형태로 출력되는 데이터 저장 DB는 sqlite3 사용  소스 코드1234567891011121314151617181920212223242526272829303132333435363738394041import urllib.request, urllib.parse, urllib.errorimport">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web Crawling (3) Database">
+<meta property="og:url" content="https://yxxnah.github.io/2019/10/02/Web-Crawling-3-Database/index.html">
 <meta property="og:site_name" content="DEV:archive">
+<meta property="og:description" content="크롤링한 데이터를 DB에 저장하기 API를 호출하여 JSON 형태로 출력되는 데이터 저장 DB는 sqlite3 사용  소스 코드1234567891011121314151617181920212223242526272829303132333435363738394041import urllib.request, urllib.parse, urllib.errorimport">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://yxxnah.github.io/2019/10/02/Web-Crawling-3-Database/exc1.png">
+<meta property="og:updated_time" content="2019-10-02T07:50:18.422Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DEV:archive">
+<meta name="twitter:title" content="Web Crawling (3) Database">
+<meta name="twitter:description" content="크롤링한 데이터를 DB에 저장하기 API를 호출하여 JSON 형태로 출력되는 데이터 저장 DB는 sqlite3 사용  소스 코드1234567891011121314151617181920212223242526272829303132333435363738394041import urllib.request, urllib.parse, urllib.errorimport">
+<meta name="twitter:image" content="https://yxxnah.github.io/2019/10/02/Web-Crawling-3-Database/exc1.png">
     
 
     
@@ -130,94 +138,161 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">Tech</em>
+    uncategorized
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Web-Crawling-3-Database" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Tech/">Tech</a>
-            </div>
-            <div class="date"><time datetime="2019-04-18T02:49:14.000Z" itemprop="datePublished">2019-04-18</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/04/18/REST-API/">REST API</a>
+        Web Crawling (3) Database
         </h1>
     
 
-        <p class="article-excerpt">
-            들어가기 전기존에 운영 중이던 API 시스템을 개선하고자 검토했던 내용이다.당시 REST의 개념을 정확히 알고 있지 못한 상태여서 개념부터 차근차근 정리했었는데 기록으로도 남겨보자 싶었다.
-REST(Representational Safe Transfer)
-HTTP URL로 표현된 리소스에 대한 행위를 HTTP Method로 정의한다.
-리소스, 메소드, 메시
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
+            </header>
         
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Tech/">Tech</a>
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/10/02/Web-Crawling-3-Database/" class="article-date">
+            <time datetime="2019-10-02T07:36:46.000Z" itemprop="datePublished">2019-10-02</time>
+        </a>
+    </div>
+
+		
+
+                
             </div>
-            <div class="date"><time datetime="2019-04-17T08:02:55.000Z" itemprop="datePublished">2019-04-17</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/04/17/MSA-Microservice-Architecture-톺아보기-1/">MSA(Microservice Architecture)</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="크롤링한-데이터를-DB에-저장하기"><a href="#크롤링한-데이터를-DB에-저장하기" class="headerlink" title="크롤링한 데이터를 DB에 저장하기"></a>크롤링한 데이터를 DB에 저장하기</h2><ol>
+<li>API를 호출하여 JSON 형태로 출력되는 데이터 저장</li>
+<li>DB는 <code>sqlite3</code> 사용</li>
+</ol>
+<h2 id="소스-코드"><a href="#소스-코드" class="headerlink" title="소스 코드"></a>소스 코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request, urllib.parse, urllib.error</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    acct = input(<span class="string">'Enter title, or quit: '</span>)</span><br><span class="line">    <span class="keyword">if</span> (acct == <span class="string">'quit'</span>): <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> (len(acct) &lt; <span class="number">1</span>):</span><br><span class="line">        url = <span class="string">"http://api.plos.org/search?q=title:DNA"</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        url = <span class="string">"http://api.plos.org/search?q=title:"</span> + acct</span><br><span class="line"></span><br><span class="line">    print(<span class="string">'Fetching from...'</span> + url)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># data 가져오기</span></span><br><span class="line">    response = urllib.request.urlopen(url)</span><br><span class="line">    dataset = json.loads(response.read())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># DB connect</span></span><br><span class="line">    conn = sqlite3.connect(<span class="string">'plosdb.sqlite'</span>)</span><br><span class="line">    cur = conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> dataset[<span class="string">'response'</span>][<span class="string">'docs'</span>]:</span><br><span class="line">        sql = <span class="string">'''INSERT INTO docs (id, journal, eissn, publication_date, article_type, title_display, score) VALUES (?, ?, ?, ?, ?, ?, ?)'''</span></span><br><span class="line">        values = tuple((row[<span class="string">'id'</span>], row[<span class="string">'journal'</span>], row[<span class="string">'eissn'</span>], row[<span class="string">'publication_date'</span>], row[<span class="string">'article_type'</span>], row[<span class="string">'title_display'</span>], row[<span class="string">'score'</span>]))</span><br><span class="line">        cur.execute(sql, values)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># multiple 데이터는 다른 테이블에 따로 저장</span></span><br><span class="line">        <span class="keyword">if</span> <span class="string">'author_display'</span> <span class="keyword">in</span> row:</span><br><span class="line">            <span class="keyword">for</span> item <span class="keyword">in</span> row[<span class="string">'author_display'</span>]:</span><br><span class="line">                sql = <span class="string">'''INSERT INTO author (docs_id, author_name) VALUES (?, ?)'''</span></span><br><span class="line">                values = tuple((row[<span class="string">'id'</span>], item))</span><br><span class="line">                cur.execute(sql, values)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">'abstract'</span> <span class="keyword">in</span> row:</span><br><span class="line">            <span class="keyword">for</span> item <span class="keyword">in</span> row[<span class="string">'abstract'</span>]:</span><br><span class="line">                sql = <span class="string">'''INSERT INTO abstract (docs_id, content) VALUES (?, ?)'''</span></span><br><span class="line">                values = tuple((row[<span class="string">'id'</span>], item))</span><br><span class="line">                cur.execute(sql, values)</span><br><span class="line"></span><br><span class="line">    conn.commit()</span><br><span class="line">    print(<span class="string">'Complete!'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="실행-화면"><a href="#실행-화면" class="headerlink" title="실행 화면"></a>실행 화면</h2><ol>
+<li><p>빈 값 입력 시 <code>title = &#39;DNA&#39;</code> 실행<br><img src="exc1.png" alt></p>
+</li>
+<li><p>‘title’ 입력 시 <code>title = &#39;입력 값&#39;</code> 실행<br><img src="exc2.png" alt></p>
+</li>
+<li><p><code>quit</code> 입력 시 종료<br><img src="exc3.png" alt></p>
+</li>
+</ol>
+<h2 id="저장-결과"><a href="#저장-결과" class="headerlink" title="저장 결과"></a>저장 결과</h2><h4 id="docs"><a href="#docs" class="headerlink" title="docs"></a>docs</h4><p><img src="doc.png" alt></p>
+<h4 id="author"><a href="#author" class="headerlink" title="author"></a>author</h4><p><img src="author.png" alt></p>
+<h4 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h4><p><img src="ab.png" alt></p>
 
-        <p class="article-excerpt">
-            목적: 마이크로서비스 아키텍처 톺아보기
-내용
-비교
-Node.js API 서버 구축
-
-비교 (monolith vs microservices)출처: martinfowler.com
-모놀리틱 아키텍처
-하나의 프로젝트로 구성된 애플리케이션 (waterfall model)
-하나의 서버에 모든 비즈니스 로직이 들어가 있는 형태
-서비스 규모가 커지면서 발생하는 각종 이슈
-        </p>
-    </div>
-</article>
-    
         </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://yxxnah.github.io/2019/10/02/Web-Crawling-3-Database/" data-id="ck18yx2gu000ozj3zg1bw2a7s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Yoonah Seo"
+        },
+        "headline": "Web Crawling (3) Database",
+        "image": "https://yxxnah.github.ioexc1.png",
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2019-10-02",
+        "dateCreated": "2019-10-02",
+        "dateModified": "2019-10-02",
+        "url": "https://yxxnah.github.io/2019/10/02/Web-Crawling-3-Database/",
+        "description": "크롤링한 데이터를 DB에 저장하기
+API를 호출하여 JSON 형태로 출력되는 데이터 저장
+DB는 sqlite3 사용
+
+소스 코드1234567891011121314151617181920212223242526272829303132333435363738394041import urllib.request, urllib.parse, urllib.errorimport "
+        "wordCount": 567
+    }
+</script>
+
+</article>
+
+    <section id="comments">
     
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-
-    </div></section>
-
+    
+    </section>
 
 
 
@@ -227,6 +302,19 @@ Node.js API 서버 구축
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="github-card" data-github="yxxnah" data-width="340" data-height="150" data-theme="default"></div>
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/09/02/Web-Crawling-2-BeautifulSoup/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Web Crawling (2) BeautifulSoup</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -380,11 +468,13 @@ Node.js API 서버 구축
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://yxxnah.github.io/2019/10/02/Web-Crawling-3-Database/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

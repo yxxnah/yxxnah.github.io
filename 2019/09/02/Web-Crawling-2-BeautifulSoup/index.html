@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="python">
     
-    <meta name="description" content="사용 배경웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 합니다. 파이썬의 request 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있습니다. BeautifulSoup 웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML 파일에서">
+    <meta name="description" content="사용 배경웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 한다. 파이썬의 requests 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 문서를 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있다. BeautifulSoup 웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML, JS">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web Crawling (2) BeautifulSoup">
 <meta property="og:url" content="https://yxxnah.github.io/2019/09/02/Web-Crawling-2-BeautifulSoup/index.html">
 <meta property="og:site_name" content="DEV:archive">
-<meta property="og:description" content="사용 배경웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 합니다. 파이썬의 request 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있습니다. BeautifulSoup 웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML 파일에서">
+<meta property="og:description" content="사용 배경웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 한다. 파이썬의 requests 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 문서를 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있다. BeautifulSoup 웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML, JS">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-03T06:44:03.701Z">
+<meta property="og:updated_time" content="2019-10-02T07:34:29.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web Crawling (2) BeautifulSoup">
-<meta name="twitter:description" content="사용 배경웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 합니다. 파이썬의 request 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있습니다. BeautifulSoup 웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML 파일에서">
+<meta name="twitter:description" content="사용 배경웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 한다. 파이썬의 requests 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 문서를 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있다. BeautifulSoup 웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML, JS">
     
 
     
@@ -176,27 +176,32 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="사용-배경"><a href="#사용-배경" class="headerlink" title="사용 배경"></a>사용 배경</h2><p>웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 합니다.</p>
-<p>파이썬의 <code>request</code> 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있습니다.</p>
+            <h2 id="사용-배경"><a href="#사용-배경" class="headerlink" title="사용 배경"></a>사용 배경</h2><p>웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 한다.</p>
+<p>파이썬의 <code>requests</code> 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 문서를 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있다.</p>
 <h2 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h2><ul>
-<li>웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML 파일에서 원하는 데이터를 손쉽게 파싱 할 수 있도록 도와줍니다.</li>
+<li>웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML, JSON 등의 파일에서 원하는 데이터를 손쉽게 파싱 할 수 있도록 도와준다.</li>
 </ul>
 <h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><ol>
 <li><p>파이썬 설치 명령(pip or pip3) 사용</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip3 install beautifulsoup4</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>파일 다운로드<br><a href="http://www.py4e.com/code3/bs4.zip" target="_blank" rel="noopener">http://www.py4e.com/code3/bs4.zip</a> 다운로드 후 폴더에 압축을 해제합니다.</p>
+<li><p>파일 다운로드<br><a href="http://www.py4e.com/code3/bs4.zip" target="_blank" rel="noopener">http://www.py4e.com/code3/bs4.zip</a> 다운로드 후 폴더에 압축을 해제</p>
 </li>
 </ol>
 <h2 id="라이브러리-사용법"><a href="#라이브러리-사용법" class="headerlink" title="라이브러리 사용법"></a>라이브러리 사용법</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request, urllib.parse, urllib.error</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br></pre></td></tr></table></figure>
-<h2 id="예제"><a href="#예제" class="headerlink" title="예제"></a>예제</h2>
+<h2 id="예제-HTML-문서-크롤링-후-파싱"><a href="#예제-HTML-문서-크롤링-후-파싱" class="headerlink" title="예제 (HTML 문서 크롤링 후 파싱)"></a>예제 (HTML 문서 크롤링 후 파싱)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request, urllib.parse, urllib.error</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">​</span><br><span class="line"><span class="comment"># html url 정의</span></span><br><span class="line">url = <span class="string">'http://python-data.dr-chuck.net/comments_42.html'</span></span><br><span class="line"><span class="comment"># 크롤링 할 웹 사이트 도메인에 요청</span></span><br><span class="line">html = urllib.request.urlopen(url)</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'html.parser'</span>)</span><br><span class="line">elements = soup.find(<span class="string">'table'</span>).find_all(<span class="string">'span'</span>)</span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line">​</span><br><span class="line"><span class="keyword">for</span> tag <span class="keyword">in</span> elements:</span><br><span class="line">	sum = sum + int(tag.text)</span><br><span class="line">​</span><br><span class="line">print(<span class="string">"number of comments : "</span> + str(len(elements)) + <span class="string">", total count : "</span> + str(sum))</span><br></pre></td></tr></table></figure>
+<h2 id="사용하는-함수"><a href="#사용하는-함수" class="headerlink" title="사용하는 함수"></a>사용하는 함수</h2><ul>
+<li>find_all(‘element’) : 문서 내에서 <code>element</code>에 해당하는 요소를 모두 찾아 <code>list</code>로 반환</li>
+<li>find() : 문서 내에서 <code>element</code>에 해당하는 첫 번째 요소를 찾아 반환</li>
+</ul>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/09/02/Web-Crawling-2-BeautifulSoup/" data-id="ck03gw7w9000mem3zzjd3jpjl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/09/02/Web-Crawling-2-BeautifulSoup/" data-id="ck18yx2gq000jzj3zytnh115l" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -272,13 +277,13 @@
         "genre": "Programming python",
         "datePublished": "2019-09-02",
         "dateCreated": "2019-09-02",
-        "dateModified": "2019-09-03",
+        "dateModified": "2019-10-02",
         "url": "https://yxxnah.github.io/2019/09/02/Web-Crawling-2-BeautifulSoup/",
-        "description": "사용 배경웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 합니다.
-파이썬의 request 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있습니다.
+        "description": "사용 배경웹 크롤링을 하기 위해서는 기본적으로 웹 페이지의 도메인에 요청해야 한다.
+파이썬의 requests 모듈로도 가능하지만, 이를 통해 가져온 데이터는 단순한 문자열 형태이기 때문에 문서를 파싱(Parsing)하고 데이터를 분석하기에는 한계가 있다.
 BeautifulSoup
-웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML 파일에서 "
-        "wordCount": 107
+웹 크롤링을 할 때 사용하는 Python 라이브러리로 HTML, XML, JS"
+        "wordCount": 241
     }
 </script>
 
@@ -306,6 +311,16 @@ BeautifulSoup
         
 <nav id="article-nav">
     
+        <a href="/2019/10/02/Web-Crawling-3-Database/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Web Crawling (3) Database
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/09/01/Regular-Expression/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -327,6 +342,15 @@ BeautifulSoup
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2019/10/02/Web-Crawling-3-Database/" class="title">Web Crawling (3) Database</a></p>
+                            <p class="item-date"><time datetime="2019-10-02T07:36:46.000Z" itemprop="datePublished">2019-10-02</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -364,15 +388,6 @@ BeautifulSoup
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Git/">Git</a></p>
-                            <p class="item-title"><a href="/2019/04/19/Git-Troubleshooting/" class="title">Git Troubleshooting</a></p>
-                            <p class="item-date"><time datetime="2019-04-19T08:54:45.000Z" itemprop="datePublished">2019-04-19</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -392,7 +407,7 @@ BeautifulSoup
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
