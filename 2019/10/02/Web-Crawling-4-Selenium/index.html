@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="DEV Archive | YOONAH">
 <meta property="og:description" content="Selenium(셀레니움)요약 BeautifulSoup을 사용하여 크롤링을 할 수 있지만, 내용이 모두 로드된 페이지를 대상으로만 가능하다. 원하는 동작 수행 후(ex. 특정 키워드로 검색한 결과 페이지) 결과를 크롤링 하는 경우가 대부분이기 때문에 이 방법으로만은 한계가 있다. 셀레니움으로는 브라우저를 컨트롤 할 수 있다.설치: pip 혹은 pip3 으로">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-02T12:35:04.559Z">
+<meta property="og:updated_time" content="2019-10-06T07:48:31.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="파이썬으로 웹 크롤링(Web Crawling) 하기(4) Selenium 사용하기">
 <meta name="twitter:description" content="Selenium(셀레니움)요약 BeautifulSoup을 사용하여 크롤링을 할 수 있지만, 내용이 모두 로드된 페이지를 대상으로만 가능하다. 원하는 동작 수행 후(ex. 특정 키워드로 검색한 결과 페이지) 결과를 크롤링 하는 경우가 대부분이기 때문에 이 방법으로만은 한계가 있다. 셀레니움으로는 브라우저를 컨트롤 할 수 있다.설치: pip 혹은 pip3 으로">
@@ -191,6 +191,17 @@
 <li>크롬 브라우저 다운로드 : <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></li>
 <li><code>다운로드 &gt; 압축 해제</code> 후 프로젝트 경로에 실행 파일을 위치시켜주면 된다.</li>
 </ul>
+<h2 id="구현"><a href="#구현" class="headerlink" title="구현"></a>구현</h2><p>: 인스타그램 로그인 후, 태그 검색 결과를 크롤링하는 예제를 작성해보았다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> urllib.request, urllib.parse, urllib.error</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver <span class="keyword">as</span> wd</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.keys <span class="keyword">import</span> Keys</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> soup</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"><span class="comment"># 인스타그램 로그인 URL</span></span><br><span class="line">loginUrl = <span class="string">'https://www.instagram.com/accounts/login/'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># driver load</span></span><br><span class="line">driver = wd.Chrome(executable_path=<span class="string">'./chromedriver'</span>)</span><br><span class="line"></span><br><span class="line">driver.implicitly_wait(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 웹 사이트 접속</span></span><br><span class="line">driver.get(loginUrl)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 사전 정보 정의</span></span><br><span class="line">username = <span class="string">'계정명'</span></span><br><span class="line">userpw = <span class="string">'비밀번호'</span></span><br><span class="line">hashTag = <span class="string">'해쉬태그'</span></span><br><span class="line">hashLink = <span class="string">'//a[@href="/explore/tags/'</span>+hashTag+<span class="string">'/"]'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 로그인 정보 입력</span></span><br><span class="line">driver.find_element_by_name(<span class="string">'username'</span>).send_keys(username)</span><br><span class="line">driver.find_element_by_name(<span class="string">'password'</span>).send_keys(userpw)</span><br><span class="line"></span><br><span class="line">driver.implicitly_wait(<span class="number">5</span>)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">'//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[4]/button'</span>).submit()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 태그 입력</span></span><br><span class="line">driver.find_element_by_xpath(<span class="string">"""//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input"""</span>).send_keys(hashTag)</span><br><span class="line">driver.implicitly_wait(<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 해시태그 URL</span></span><br><span class="line">tagUrl = <span class="string">'https://www.instagram.com/explore/tags/'</span> + hashTag + <span class="string">'/'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 옵션 추가 (브라우저 띄우지 않음)</span></span><br><span class="line">options = wd.ChromeOptions()</span><br><span class="line">options.add_argument(<span class="string">'headless'</span>)</span><br><span class="line">options.add_argument(<span class="string">'disable-gpu'</span>)</span><br><span class="line">driver = wd.Chrome(executable_path=<span class="string">'./chromedriver'</span>, options=options)</span><br><span class="line"></span><br><span class="line">driver.implicitly_wait(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 웹 사이트 접속</span></span><br><span class="line">driver.get(tagUrl)</span><br><span class="line"></span><br><span class="line">images = driver.find_elements_by_tag_name(<span class="string">'img'</span>)</span><br><span class="line">data = OrderedDict()</span><br><span class="line"></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> img <span class="keyword">in</span> images:</span><br><span class="line">  data[str(count)] = &#123;<span class="string">'src'</span>:img.get_attribute(<span class="string">'src'</span>)&#125;</span><br><span class="line">  count += <span class="number">1</span></span><br><span class="line">  <span class="keyword">if</span> count == <span class="number">100</span>:</span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'search.json'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  json.dump(data, file, ensure_ascii=<span class="literal">False</span>, indent=<span class="string">'\t'</span>)</span><br><span class="line"></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+<h3 id="구현-기능"><a href="#구현-기능" class="headerlink" title="구현 기능"></a>구현 기능</h3><ul>
+<li>입력한 계정으로 자동 로그인</li>
+<li>검색창에 해쉬태그 자동 입력</li>
+<li>딕셔너리 형태로 json 파일 저장 (해당 파일은 src 정보만 가지고 있음)</li>
+</ul>
+<h3 id="구현-못한-기능"><a href="#구현-못한-기능" class="headerlink" title="구현 못한 기능"></a>구현 못한 기능</h3><ul>
+<li>Raw image 저장하지는 못했음</li>
+<li>인스타그램은 스크롤하면서 게시물이 늘어나는데, 해당 부분은 해결하지 못함 (스크롤 하지 않은 상태 = 맨 처음에 로드된 이미지만 저장하였음)</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -198,7 +209,7 @@
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/10/02/Web-Crawling-4-Selenium/" data-id="ck1eo9kf0000o7h3zsyek3f19" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/10/02/Web-Crawling-4-Selenium/" data-id="ck1eonbzm000n8b3zdgguqay4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -274,13 +285,13 @@
         "genre": "Programming python",
         "datePublished": "2019-10-02",
         "dateCreated": "2019-10-02",
-        "dateModified": "2019-10-02",
+        "dateModified": "2019-10-06",
         "url": "https://yxxnah.github.io/2019/10/02/Web-Crawling-4-Selenium/",
         "description": "Selenium(셀레니움)요약
 BeautifulSoup을 사용하여 크롤링을 할 수 있지만, 내용이 모두 로드된 페이지를 대상으로만 가능하다.
 원하는 동작 수행 후(ex. 특정 키워드로 검색한 결과 페이지) 결과를 크롤링 하는 경우가 대부분이기 때문에 이 방법으로만은 한계가 있다.
 셀레니움으로는 브라우저를 컨트롤 할 수 있다.설치: pip 혹은 pip3 으로"
-        "wordCount": 95
+        "wordCount": 459
     }
 </script>
 
