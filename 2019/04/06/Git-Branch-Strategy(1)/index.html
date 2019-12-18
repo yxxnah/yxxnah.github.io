@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="Git">
     
-    <meta name="description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
+    <meta name="description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 Git-flow 기본적으로 develop, 그리고 master 브랜치를 가진다. (필수) 추가적으로 생성하는 브랜치들은 feature, release, hotfixes">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git Branch Strategy (1)">
 <meta property="og:url" content="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/index.html">
 <meta property="og:site_name" content="DEV Archive | YOONAH">
-<meta property="og:description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
+<meta property="og:description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 Git-flow 기본적으로 develop, 그리고 master 브랜치를 가진다. (필수) 추가적으로 생성하는 브랜치들은 feature, release, hotfixes">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-16T10:41:40.749Z">
+<meta property="og:updated_time" content="2019-10-09T08:39:51.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Branch Strategy (1)">
-<meta name="twitter:description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 git-flow github-flow gitlab-flow  해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바">
+<meta name="twitter:description" content="브랜치 전략을 잘 세우면 코드의 변경 이력을 효율적으로 관리 할 수 있다. 프로젝트 별 히스토리를 한 눈에 파악하기 쉽다. 적절한 브랜치 사용은 배포의 편의성을 제공한다.  상용 브랜치 모델 Git-flow 기본적으로 develop, 그리고 master 브랜치를 가진다. (필수) 추가적으로 생성하는 브랜치들은 feature, release, hotfixes">
     
 
     
@@ -82,7 +82,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Tech/">Tech</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/python/">python</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/GraphQL/">GraphQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Tech/">Tech</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/python/">python</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="https://www.linkedin.com/in/yoonah-seo-a01040179/">About</a>
@@ -186,11 +186,19 @@
 <li>적절한 브랜치 사용은 배포의 편의성을 제공한다.</li>
 </ul>
 <h2 id="상용-브랜치-모델"><a href="#상용-브랜치-모델" class="headerlink" title="상용 브랜치 모델"></a>상용 브랜치 모델</h2><ul>
-<li>git-flow</li>
-<li>github-flow</li>
-<li>gitlab-flow</li>
+<li>Git-flow<ol>
+<li>기본적으로 <code>develop</code>, 그리고 <code>master</code> 브랜치를 가진다. (필수)</li>
+<li>추가적으로 생성하는 브랜치들은 <code>feature</code>, <code>release</code>, <code>hotfixes</code> 정도가 되겠다.</li>
+<li>실제로 채택하여 적용한 모델이며 배포가 주 3~4회 이상으로 잦고 작업자들끼리의 각자 변경사항들도 많았다.</li>
+</ol>
+</li>
 </ul>
-<p>해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바람직!</p>
+<p>모델을 이해하는데 우아한형제들 기술 블로그가 많은 도움이 되었다.<br><a href="http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html" target="_blank" rel="noopener">http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html</a></p>
+<ul>
+<li>Github-flow</li>
+<li>Gitlab-flow</li>
+</ul>
+<p>Git 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바람직하다.</p>
 <h2 id="배포-환경"><a href="#배포-환경" class="headerlink" title="배포 환경"></a>배포 환경</h2><ul>
 <li>현직장의 경우, 일주일에 최대 4회로 배포가 잦은 편</li>
 <li>프로젝트 별 개발 일정이 겹치는 경우도 간혹 있음</li>
@@ -198,8 +206,9 @@
 </ul>
 <h2 id="개발-환경"><a href="#개발-환경" class="headerlink" title="개발 환경"></a>개발 환경</h2><ul>
 <li>작업 순서 : 디자인 &gt; 퍼블리싱 &gt; 개발 &gt; QA &gt; QA 수정 &gt; 배포</li>
+<li>퍼블리싱 단계부터 소스를 공유했음</li>
 <li>SourceTree 사용</li>
-<li>배포/개발 환경을 고려하여 <code>git-flow</code> 모델을 적절히 활용하기로 함</li>
+<li>배포/개발 환경을 고려하여 <code>Git-flow</code> 모델을 적절히 활용하기로 함</li>
 </ul>
 
         </div>
@@ -208,7 +217,7 @@
 
 
 
-    <a data-url="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/" data-id="ck1hk85ij00021f3zlr7un0dd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/" data-id="ck4b00wqi0001k43zthurinh4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -284,7 +293,7 @@
         "genre": "Programming Git",
         "datePublished": "2019-04-06",
         "dateCreated": "2019-04-06",
-        "dateModified": "2019-04-16",
+        "dateModified": "2019-10-09",
         "url": "https://yxxnah.github.io/2019/04/06/Git-Branch-Strategy(1)/",
         "description": "브랜치 전략을 잘 세우면
 코드의 변경 이력을 효율적으로 관리 할 수 있다.
@@ -292,12 +301,10 @@
 적절한 브랜치 사용은 배포의 편의성을 제공한다.
 
 상용 브랜치 모델
-git-flow
-github-flow
-gitlab-flow
-
-해당 모델을 적용할 때는 각자 모델을 참고하되 현재 정책, 시스템에 맞게 커스터마이징하여 사용하는 것이 바"
-        "wordCount": 119
+Git-flow
+기본적으로 develop, 그리고 master 브랜치를 가진다. (필수)
+추가적으로 생성하는 브랜치들은 feature, release, hotfixes"
+        "wordCount": 157
     }
 </script>
 
@@ -354,6 +361,15 @@ gitlab-flow
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/GraphQL/">GraphQL</a></p>
+                            <p class="item-title"><a href="/2019/10/31/GraphQL/" class="title">GraphQL</a></p>
+                            <p class="item-date"><time datetime="2019-10-31T09:08:07.000Z" itemprop="datePublished">2019-10-31</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/python/">python</a></p>
                             <p class="item-title"><a href="/2019/10/08/Web-Crawling-5-Scrapy/" class="title">파이썬으로 웹 크롤링(Web Crawling) 하기(5) Scrapy</a></p>
                             <p class="item-date"><time datetime="2019-10-08T07:26:29.000Z" itemprop="datePublished">2019-10-08</time></p>
@@ -387,15 +403,6 @@ gitlab-flow
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/python/">python</a></p>
-                            <p class="item-title"><a href="/2019/09/01/Regular-Expression/" class="title">파이썬으로 웹 크롤링(Web Crawling) 하기(1) Regular Expression</a></p>
-                            <p class="item-date"><time datetime="2019-09-01T10:29:53.000Z" itemprop="datePublished">2019-09-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -405,7 +412,7 @@ gitlab-flow
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Git/">Git</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Tech/">Tech</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/python/">python</a><span class="category-list-count">5</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Git/">Git</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/GraphQL/">GraphQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/GraphQL/TECH/">TECH</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/Tech/">Tech</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/python/">python</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -415,7 +422,7 @@ gitlab-flow
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -425,7 +432,7 @@ gitlab-flow
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BeautifulSoup/">BeautifulSoup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSA/">MSA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/">scrapy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/">selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/정규식/">정규식</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BeautifulSoup/">BeautifulSoup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/">GraphQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSA/">MSA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/">scrapy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/">selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/정규식/">정규식</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -435,7 +442,7 @@ gitlab-flow
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/BeautifulSoup/" style="font-size: 10px;">BeautifulSoup</a> <a href="/tags/Git/" style="font-size: 16.67px;">Git</a> <a href="/tags/Java/" style="font-size: 13.33px;">Java</a> <a href="/tags/MSA/" style="font-size: 10px;">MSA</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/정규식/" style="font-size: 10px;">정규식</a>
+            <a href="/tags/BeautifulSoup/" style="font-size: 10px;">BeautifulSoup</a> <a href="/tags/Git/" style="font-size: 16.67px;">Git</a> <a href="/tags/GraphQL/" style="font-size: 10px;">GraphQL</a> <a href="/tags/Java/" style="font-size: 13.33px;">Java</a> <a href="/tags/MSA/" style="font-size: 10px;">MSA</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/정규식/" style="font-size: 10px;">정규식</a>
         </div>
     </div>
 
