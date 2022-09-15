@@ -2276,6 +2276,10 @@ fadeIn {  from {
 
 /*Mobile*/
 @media (max-width:768px) {
+  /* .tanggal {
+    font-size:12px;
+  } */
+
   .flower-1 {
     height: 2%;
     filter: invert(10%) sepia(900%) saturate(190%) hue-rotate(315deg) brightness(90%) contrast(87%);
@@ -2294,7 +2298,7 @@ fadeIn {  from {
   .flower-3-top{
     height: 200px;
     bottom: 40px;
-    top: 5%
+    top: 5%;
     filter: invert(10%) sepia(900%) saturate(190%) hue-rotate(315deg) brightness(90%) contrast(87%);
   }
   .flower-4-bottom{
