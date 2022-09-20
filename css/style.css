@@ -457,7 +457,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-header {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 0px;
   background-image: url("../images/background/repeat-background/nice_snow.png");
   background-repeat: repeat;
   /*background-size: cover;*/
