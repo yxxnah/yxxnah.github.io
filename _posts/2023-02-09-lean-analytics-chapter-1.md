@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "린 분석(Lean Analytics) 읽기 Chapter 1."
+title: "린 분석(Lean Analytics) 읽기 (1)"
 tags: [데이터분석, 스타트업, 책]
 comments: true
 ---
