@@ -25,7 +25,7 @@ Github [https://github.com/yxxnah](https://github.com/yxxnah)
 
 ---
 
-### Product Data Analyst
+### **Product Data Analyst**
 Team Lead
 
 2023
@@ -43,15 +43,15 @@ Team Lead
 
 ---
 
-### Data Engineer
+### **Data Engineer**
 
 2021 - 2022
 
 - 다양한 환경에서 유입되는 원천 데이터를 수집하고 가공하여 초기 데이터 파이프라인 구축
 - 비대면진료 프로덕트를 분석하여 핵심 지표를 세팅하고 대시보드를 제작하여 비즈니스 인사이트 도출
 - 병원 접수 서비스 지표의 문제점을 인식하고 개선하여 전사적으로 핵심 지표를 보는 문화를 만듬
-- [Heap](https://heap.io/), [Amplitude](https://amplitude.com/) 로 앱 유저의 행동 로그를 분석하여 앱 마케팅에 기여
-- Ad-hok 성격의 데이터 분석 및 추출
+- 사용자 행동 로그를 분석하고 제품과 마케팅에 기여
+- Ad-hoc 성격의 데이터 분석 및 추출
 
 ---
 
